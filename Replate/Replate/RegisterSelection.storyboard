@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hxk-6R-eR1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="leV-FN-08u">
+            <objects>
+                <viewController id="Hxk-6R-eR1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AHW-n4-jLF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zde-GS-QGJ">
+                                <rect key="frame" x="146" y="116" width="122.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cja-2V-EBf">
+                                <rect key="frame" x="81.5" y="735.5" width="251" height="33"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfN-xY-oEO">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgK-NU-njs">
+                                        <rect key="frame" x="204" y="0.0" width="47" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="Log in">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPu-3D-PHS">
+                                <rect key="frame" x="24" y="195.5" width="366" height="236"/>
+                                <state key="normal" title="Button" image="Donate"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3r-9M-RAS">
+                                <rect key="frame" x="24" y="463.5" width="366" height="250"/>
+                                <state key="normal" title="Button" image="Volunteer"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fon-3y-21X" firstAttribute="trailing" secondItem="j3r-9M-RAS" secondAttribute="trailing" constant="24" id="7oy-l7-iyv"/>
+                            <constraint firstItem="j3r-9M-RAS" firstAttribute="top" secondItem="yPu-3D-PHS" secondAttribute="bottom" constant="32" id="8yT-Xd-bCq"/>
+                            <constraint firstItem="zde-GS-QGJ" firstAttribute="top" secondItem="Fon-3y-21X" secondAttribute="top" constant="72" id="93I-0V-p08"/>
+                            <constraint firstItem="zde-GS-QGJ" firstAttribute="centerX" secondItem="AHW-n4-jLF" secondAttribute="centerX" id="Gg2-dO-YaZ"/>
+                            <constraint firstItem="cja-2V-EBf" firstAttribute="centerX" secondItem="AHW-n4-jLF" secondAttribute="centerX" id="IwH-SW-v15"/>
+                            <constraint firstItem="Fon-3y-21X" firstAttribute="trailing" secondItem="yPu-3D-PHS" secondAttribute="trailing" constant="24" id="PxN-Qt-5tD"/>
+                            <constraint firstItem="yPu-3D-PHS" firstAttribute="leading" secondItem="Fon-3y-21X" secondAttribute="leading" constant="24" id="gRU-iI-TTf"/>
+                            <constraint firstItem="j3r-9M-RAS" firstAttribute="leading" secondItem="Fon-3y-21X" secondAttribute="leading" constant="24" id="k7k-BN-jww"/>
+                            <constraint firstItem="yPu-3D-PHS" firstAttribute="top" secondItem="zde-GS-QGJ" secondAttribute="bottom" constant="46" id="uhi-hG-MOM"/>
+                            <constraint firstItem="cja-2V-EBf" firstAttribute="top" secondItem="j3r-9M-RAS" secondAttribute="bottom" constant="22" id="wIQ-Dm-Fyz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fon-3y-21X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efD-Jz-Dlc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="151.33928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Donate" width="345" height="236"/>
+        <image name="Volunteer" width="345" height="250"/>
+    </resources>
+</document>
