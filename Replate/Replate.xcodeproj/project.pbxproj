@@ -12,6 +12,9 @@
 		574499252356CFB000147D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574499232356CFB000147D81 /* Main.storyboard */; };
 		574499272356CFBE00147D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574499262356CFBE00147D81 /* Assets.xcassets */; };
 		5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574499282356CFBE00147D81 /* LaunchScreen.storyboard */; };
+		D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */; };
+		D667E43423581A74005CBCB3 /* RegisterSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */; };
+		D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		574499262356CFBE00147D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		574499292356CFBE00147D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5744992B2356CFBE00147D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolunteerLogin.storyboard; sourceTree = "<group>"; };
+		D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterSelection.storyboard; sourceTree = "<group>"; };
+		D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BusinessLogin.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 				5744991D2356CFB000147D81 /* AppDelegate.swift */,
 				5744991F2356CFB000147D81 /* SceneDelegate.swift */,
 				574499232356CFB000147D81 /* Main.storyboard */,
+				D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */,
+				D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */,
+				D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */,
 				574499262356CFBE00147D81 /* Assets.xcassets */,
 				574499282356CFBE00147D81 /* LaunchScreen.storyboard */,
 				5744992B2356CFBE00147D81 /* Info.plist */,
@@ -130,8 +139,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */,
 				5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */,
+				D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */,
 				574499272356CFBE00147D81 /* Assets.xcassets in Resources */,
+				D667E43423581A74005CBCB3 /* RegisterSelection.storyboard in Resources */,
 				574499252356CFB000147D81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
