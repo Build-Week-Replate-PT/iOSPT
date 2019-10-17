@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Volunteer Dashboard Table View Controller-->
         <scene sceneID="Rth-0i-NWU">
             <objects>
-                <tableViewController id="3T4-Id-qCN" sceneMemberID="viewController">
+                <tableViewController id="3T4-Id-qCN" customClass="VolunteerDashboardTableViewController" customModule="Replate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RTQ-vi-ddK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,10 +123,10 @@
             </objects>
             <point key="canvasLocation" x="1294.2028985507247" y="60.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--Pickup Detail View Controller-->
         <scene sceneID="oHf-u6-St5">
             <objects>
-                <viewController id="6Z6-Zh-0TO" sceneMemberID="viewController">
+                <viewController id="6Z6-Zh-0TO" customClass="PickupDetailViewController" customModule="Replate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8pf-6P-gHQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -273,10 +273,10 @@
             </objects>
             <point key="canvasLocation" x="2430.434782608696" y="479.46428571428567"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Volunteer Schedule Table View Controller-->
         <scene sceneID="Iaw-VX-g4x">
             <objects>
-                <tableViewController id="VzA-yd-UvL" sceneMemberID="viewController">
+                <tableViewController id="VzA-yd-UvL" customClass="VolunteerScheduleTableViewController" customModule="Replate" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wp4-2Z-bH4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
