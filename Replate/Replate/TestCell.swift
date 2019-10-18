@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class TestCell {
-    
+    // Just for testing the tableview UI
     var foodImage: UIImage
     var date: String
     var qty: Int

@@ -10,6 +10,11 @@ import UIKit
 
 class VolunteerScheduleTableViewController: UITableViewController {
 
+    // Test cells to check that UI is working
+    var testCells = [
+            TestCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,23 +29,27 @@ class VolunteerScheduleTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return testCells.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return testCells.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "pickupsCell", for: indexPath)
 
-        // Configure the cell...
+        
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
