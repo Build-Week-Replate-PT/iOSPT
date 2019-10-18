@@ -1,5 +1,5 @@
 //
-//  Volunteer.swift
+//  Business.swift
 //  Replate
 //
 //  Created by Michael Stoffer on 10/17/19.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct VolunteerUser: Equatable, Codable {
-    var user: Volunteer
+struct BusinessUser: Equatable, Codable {
+    var user: Business
 }
 
-struct Volunteer: Equatable, Codable {
+struct Business: Equatable, Codable {
     var id: Int
     var username: String
     var password: String
@@ -21,4 +21,3 @@ struct Volunteer: Equatable, Codable {
     var email: String
     var phone: Int
 }
-
