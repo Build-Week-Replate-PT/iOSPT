@@ -29,7 +29,7 @@ class FoodController {
     var token: Token?
     let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/food")!
     
-    func fetchBusinessDonations(completion: @escaping (Result<[String], NetworkError>) -> Void) {
+    func fetchAllDonations(completion: @escaping (Result<[String], NetworkError>) -> Void) {
         // Check for Business User Token
         guard let token = token else {
             completion(.failure(.noAuth))
@@ -37,7 +37,7 @@ class FoodController {
         }
         
         var request = URLRequest(url: baseURL)
-        request.httpMethod = HTTPMethod.post.rawValue
+        request.httpMethod = HTTPMethod.get.rawValue
         request.setValue("Token \(token.token)", forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
