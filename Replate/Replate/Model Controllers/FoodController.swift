@@ -25,11 +25,14 @@ enum NetworkError: Error {
 
 class FoodController {
     
+    // MARK: Properties
+    typealias CompletionHandler = (Result<[String], NetworkError>) -> Void
     var donations: [Food] = []
     var token: Token?
     let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/food")!
     
-    func fetchAllDonations(completion: @escaping (Result<[String], NetworkError>) -> Void) {
+    // MARK: Fetch all items function
+    func fetchAllDonations(completion: @escaping CompletionHandler) {
         // Check for User Token
         guard let token = token else {
             completion(.failure(.noAuth))
@@ -72,7 +75,8 @@ class FoodController {
         
     }
     
-    func fetchBusinessDonations(completion: @escaping (Result<[String], NetworkError>) -> Void) {
+    // MARK: Business User functions
+    func fetchBusinessDonations(completion: @escaping CompletionHandler) {
         guard let token = token else {
             completion(.failure(.noAuth))
             return
@@ -112,5 +116,7 @@ class FoodController {
             }
         }.resume()
     }
+    
+    // MARK: Volunteer user functions
     
 }
