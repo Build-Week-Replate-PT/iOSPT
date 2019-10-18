@@ -12,13 +12,16 @@
 		574499252356CFB000147D81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574499232356CFB000147D81 /* Main.storyboard */; };
 		574499272356CFBE00147D81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574499262356CFBE00147D81 /* Assets.xcassets */; };
 		5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574499282356CFBE00147D81 /* LaunchScreen.storyboard */; };
-		D650F2E4235945C8009FEF4E /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E3235945C8009FEF4E /* Volunteer.swift */; };
-		D650F2E6235948DC009FEF4E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E5235948DC009FEF4E /* Token.swift */; };
-		D650F2E823594B57009FEF4E /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E723594B57009FEF4E /* Food.swift */; };
-		D650F2EA23594F89009FEF4E /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E923594F89009FEF4E /* Business.swift */; };
-		D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */; };
 		D667E43423581A74005CBCB3 /* RegisterSelection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */; };
 		D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */; };
+		D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */; };
+		E3088C592358773D006F5B9D /* BusinessSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */; };
+		E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */; };
+		E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */; };
+		D650F2E6235948DC009FEF4E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E5235948DC009FEF4E /* Token.swift */; };
+		D650F2EA23594F89009FEF4E /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E923594F89009FEF4E /* Business.swift */; };
+		D650F2E4235945C8009FEF4E /* Volunteer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E3235945C8009FEF4E /* Volunteer.swift */; };
+		D650F2E823594B57009FEF4E /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D650F2E723594B57009FEF4E /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +32,16 @@
 		574499262356CFBE00147D81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		574499292356CFBE00147D81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5744992B2356CFBE00147D81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D650F2E3235945C8009FEF4E /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
-		D650F2E5235948DC009FEF4E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		D650F2E723594B57009FEF4E /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
-		D650F2E923594F89009FEF4E /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
-		D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolunteerLogin.storyboard; sourceTree = "<group>"; };
 		D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterSelection.storyboard; sourceTree = "<group>"; };
 		D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BusinessLogin.storyboard; sourceTree = "<group>"; };
+		D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VolunteerLogin.storyboard; sourceTree = "<group>"; };
+		E3088C5A2358773D006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BusinessSignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		E3088C602358DC43006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Replate/Storyboards/Base.lproj/VolunteerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
+		E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSignUpViewController.swift; sourceTree = "<group>"; };
+		D650F2E5235948DC009FEF4E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		D650F2E923594F89009FEF4E /* Business.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
+		D650F2E3235945C8009FEF4E /* Volunteer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Volunteer.swift; sourceTree = "<group>"; };
+		D650F2E723594B57009FEF4E /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,8 @@
 		5744991C2356CFB000147D81 /* Replate */ = {
 			isa = PBXGroup;
 			children = (
+				E3088C5C2358DBCC006F5B9D /* Storyboards */,
+				E3088C5623581890006F5B9D /* View Controllers */,
 				D667E4252357F88F005CBCB3 /* Models */,
 				5744991D2356CFB000147D81 /* AppDelegate.swift */,
 				5744991F2356CFB000147D81 /* SceneDelegate.swift */,
@@ -76,7 +84,6 @@
 				D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */,
 				D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */,
 				574499262356CFBE00147D81 /* Assets.xcassets */,
-				574499282356CFBE00147D81 /* LaunchScreen.storyboard */,
 				5744992B2356CFBE00147D81 /* Info.plist */,
 			);
 			path = Replate;
@@ -91,6 +98,25 @@
 				D650F2E723594B57009FEF4E /* Food.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		E3088C5623581890006F5B9D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E3088C5C2358DBCC006F5B9D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				574499232356CFB000147D81 /* Main.storyboard */,
+				574499282356CFBE00147D81 /* LaunchScreen.storyboard */,
+				E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */,
+				E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,8 +178,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */,
+				E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */,
 				5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */,
 				D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */,
+				E3088C592358773D006F5B9D /* BusinessSignUpStoryboard.storyboard in Resources */,
 				574499272356CFBE00147D81 /* Assets.xcassets in Resources */,
 				D667E43423581A74005CBCB3 /* RegisterSelection.storyboard in Resources */,
 				574499252356CFB000147D81 /* Main.storyboard in Resources */,
@@ -168,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5744991E2356CFB000147D81 /* AppDelegate.swift in Sources */,
+				E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */,
 				574499202356CFB000147D81 /* SceneDelegate.swift in Sources */,
 				D650F2E823594B57009FEF4E /* Food.swift in Sources */,
 				D650F2EA23594F89009FEF4E /* Business.swift in Sources */,
@@ -193,6 +222,22 @@
 				574499292356CFBE00147D81 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3088C5A2358773D006F5B9D /* Base */,
+			);
+			name = BusinessSignUpStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3088C602358DC43006F5B9D /* Base */,
+			);
+			name = VolunteerSignUpStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
