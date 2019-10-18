@@ -30,7 +30,7 @@ class FoodController {
     let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/food")!
     
     func fetchAllDonations(completion: @escaping (Result<[String], NetworkError>) -> Void) {
-        // Check for Business User Token
+        // Check for User Token
         guard let token = token else {
             completion(.failure(.noAuth))
             return
@@ -70,6 +70,47 @@ class FoodController {
             }
         }.resume()
         
+    }
+    
+    func fetchBusinessDonations(completion: @escaping (Result<[String], NetworkError>) -> Void) {
+        guard let token = token else {
+            completion(.failure(.noAuth))
+            return
+        }
+        
+        let businessDonationsURL = baseURL.appendingPathComponent("business")
+        var request = URLRequest(url: businessDonationsURL)
+        request.httpMethod = HTTPMethod.get.rawValue
+        request.setValue("Token \(token.token)", forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let donations = try decoder.decode([String].self, from: data)
+                completion(.success(donations))
+            } catch {
+                print("Error decoding business donations: \(error)")
+                completion(.failure(.noDecode))
+                return
+            }
+        }.resume()
     }
     
 }
