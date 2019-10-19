@@ -8,6 +8,17 @@
 
 import Foundation
 
+// The request is different from the response
+struct BusinessSignupRequest: Equatable, Codable {
+    var username: String
+    var password: String
+    var organization_name: String
+    var address: String
+    var email: String
+    var phone: Int
+}
+
+// The response
 struct BusinessUser: Equatable, Codable {
     var user: Business
 }
