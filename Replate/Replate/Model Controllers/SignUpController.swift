@@ -1,5 +1,5 @@
 //
-//  APIController.swift
+//  SignUpController.swift
 //  Replate
 //
 //  Created by Vici Shaweddy on 10/19/19.
@@ -9,22 +9,7 @@
 import Foundation
 import UIKit
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
-enum NetworkError: Error {
-    case noAuth
-    case badAuth
-    case otherError
-    case badData
-    case noDecode
-}
-
-
-
-class APIController {
+class SignUpController {
     typealias CompletionHandler = (Error?) -> Void
     
     private let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/auth")!
@@ -33,8 +18,8 @@ class APIController {
     var token: Token?
     
     // create function for sign up
-    func signUp(with business: BusinessSignupRequest, completion: @escaping CompletionHandler) {
-        let signUpURL = baseURL.appendingPathComponent("/business/register")
+    func signUp(type: UserType, with signupData: SignUpRequest, completion: @escaping CompletionHandler) {
+        let signUpURL = baseURL.appendingPathComponent("/\(type.rawValue)/register")
         
         var request = URLRequest(url: signUpURL)
         request.httpMethod = HTTPMethod.post.rawValue
@@ -42,7 +27,7 @@ class APIController {
         
         let jsonEncoder = JSONEncoder()
         do {
-            let jsonData = try jsonEncoder.encode(business)
+            let jsonData = try jsonEncoder.encode(signupData)
             request.httpBody = jsonData
         } catch {
             print("Error encoding business object: \(error)")
@@ -76,10 +61,11 @@ class APIController {
                 return
             }
             
-            completion(nil)
+            DispatchQueue.main.async {
+                completion(nil)
+            }
+            
         }.resume()
-        
     }
-    
 }
 

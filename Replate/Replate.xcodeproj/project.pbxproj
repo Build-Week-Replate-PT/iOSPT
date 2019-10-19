@@ -20,11 +20,13 @@
 		D6A0C5AD2359684800D9B7E6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0C5AC2359684800D9B7E6 /* LoginController.swift */; };
 		D6A0C5B1235B716B00D9B7E6 /* VolunteerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0C5B0235B716B00D9B7E6 /* VolunteerLoginViewController.swift */; };
 		D6A0C5B3235B717500D9B7E6 /* BusinessLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A0C5B2235B717500D9B7E6 /* BusinessLoginViewController.swift */; };
-		D6A0C5B7235B77B800D9B7E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6A0C5B6235B77B800D9B7E6 /* Assets.xcassets */; };
 		E3088C592358773D006F5B9D /* BusinessSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */; };
 		E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */; };
 		E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */; };
-		E3870CDE235B493500C2B807 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3870CDD235B493500C2B807 /* APIController.swift */; };
+		E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3870CDD235B493500C2B807 /* SignUpController.swift */; };
+		E3991102235BA37400FAD057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3991101235BA37400FAD057 /* Assets.xcassets */; };
+		E3991106235BA40500FAD057 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991105235BA40500FAD057 /* APIClient.swift */; };
+		E3991108235BA68A00FAD057 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991107235BA68A00FAD057 /* SignUpRequest.swift */; };
 		F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */; };
 		F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */; };
 		F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854112358D65700AC829D /* PickupDetailViewController.swift */; };
@@ -56,11 +58,13 @@
 		D6A0C5AC2359684800D9B7E6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D6A0C5B0235B716B00D9B7E6 /* VolunteerLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerLoginViewController.swift; sourceTree = "<group>"; };
 		D6A0C5B2235B717500D9B7E6 /* BusinessLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessLoginViewController.swift; sourceTree = "<group>"; };
-		D6A0C5B6235B77B800D9B7E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		E3088C5A2358773D006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BusinessSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		E3088C602358DC43006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Replate/Storyboards/Base.lproj/VolunteerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSignUpViewController.swift; sourceTree = "<group>"; };
-		E3870CDD235B493500C2B807 /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		E3870CDD235B493500C2B807 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		E3991101235BA37400FAD057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3991105235BA40500FAD057 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E3991107235BA68A00FAD057 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
 		F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerDashboardTableViewController.swift; sourceTree = "<group>"; };
 		F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerScheduleTableViewController.swift; sourceTree = "<group>"; };
 		F31854112358D65700AC829D /* PickupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupDetailViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +116,8 @@
 				E3088C5623581890006F5B9D /* View Controllers */,
 				E3088C5C2358DBCC006F5B9D /* Storyboards */,
 				5744991D2356CFB000147D81 /* AppDelegate.swift */,
-				D6A0C5B6235B77B800D9B7E6 /* Assets.xcassets */,
 				5744991F2356CFB000147D81 /* SceneDelegate.swift */,
+				E3991101235BA37400FAD057 /* Assets.xcassets */,
 				5744992B2356CFBE00147D81 /* Info.plist */,
 			);
 			path = Replate;
@@ -126,6 +130,7 @@
 				D650F2E3235945C8009FEF4E /* Volunteer.swift */,
 				D650F2E923594F89009FEF4E /* Business.swift */,
 				D650F2E723594B57009FEF4E /* Food.swift */,
+				E3991107235BA68A00FAD057 /* SignUpRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,9 +148,9 @@
 		D6A0C5AB2359683100D9B7E6 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D6A0C5AC2359684800D9B7E6 /* VolunteerController.swift */,
-				E3870CDD235B493500C2B807 /* APIController.swift */,
+				E3870CDD235B493500C2B807 /* SignUpController.swift */,
 				D6A0C5AC2359684800D9B7E6 /* LoginController.swift */,
+				E3991105235BA40500FAD057 /* APIClient.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -243,9 +248,9 @@
 			files = (
 				D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */,
 				E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */,
+				E3991102235BA37400FAD057 /* Assets.xcassets in Resources */,
 				F39C8EF92358C8870025CEE6 /* VolunteerDashboard.storyboard in Resources */,
 				F39A4CE12358F9EE00E58609 /* Main.storyboard in Resources */,
-				D6A0C5B7235B77B800D9B7E6 /* Assets.xcassets in Resources */,
 				5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */,
 				D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */,
 				E3088C592358773D006F5B9D /* BusinessSignUpStoryboard.storyboard in Resources */,
@@ -266,18 +271,20 @@
 				F31854182358EB9100AC829D /* DonationTableViewCell.swift in Sources */,
 				F31854162358EA1700AC829D /* TestCell.swift in Sources */,
 				D6A0C5B3235B717500D9B7E6 /* BusinessLoginViewController.swift in Sources */,
+				E3991106235BA40500FAD057 /* APIClient.swift in Sources */,
 				F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */,
 				F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */,
 				F318541A2358F0E500AC829D /* DonationDetailViewController.swift in Sources */,
 				D6A0C5AD2359684800D9B7E6 /* LoginController.swift in Sources */,
 				F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */,
-				E3870CDE235B493500C2B807 /* APIController.swift in Sources */,
+				E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */,
 				5744991E2356CFB000147D81 /* AppDelegate.swift in Sources */,
 				E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */,
 				F318541E2358F12100AC829D /* DatePickerViewController.swift in Sources */,
 				574499202356CFB000147D81 /* SceneDelegate.swift in Sources */,
 				D650F2E823594B57009FEF4E /* Food.swift in Sources */,
 				D650F2EA23594F89009FEF4E /* Business.swift in Sources */,
+				E3991108235BA68A00FAD057 /* SignUpRequest.swift in Sources */,
 				D650F2E4235945C8009FEF4E /* Volunteer.swift in Sources */,
 				D650F2E6235948DC009FEF4E /* Token.swift in Sources */,
 				F31854142358DDB200AC829D /* BusinessDashBoardTableViewController.swift in Sources */,

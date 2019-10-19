@@ -10,13 +10,29 @@ import UIKit
 
 class BusinessSignUpViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var businessNameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityStateZipcodeTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func continuePressed(_ sender: Any) {
+    }
+    
+    @IBAction func createPressed(_ sender: Any) {
+    }
+    
+    @IBAction func loginPressed(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
