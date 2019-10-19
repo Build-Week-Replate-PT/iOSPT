@@ -9,6 +9,10 @@
 import UIKit
 
 class VolunteerDashboardTableViewController: UITableViewController {
+    
+    // MARK: - Properties
+    
+    var loginController: LoginController?
 
     // Test cells to check that UI is working
     var testCells = [
