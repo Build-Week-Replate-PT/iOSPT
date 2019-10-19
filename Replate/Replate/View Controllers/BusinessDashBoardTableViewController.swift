@@ -10,6 +10,10 @@ import UIKit
 
 class BusinessDashBoardTableViewController: UITableViewController {
     
+    // MARK: - Properties
+    
+    var loginController: LoginController?
+    
     var testCells = [
         TestCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
 ]
