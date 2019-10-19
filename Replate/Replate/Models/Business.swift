@@ -20,5 +20,5 @@ struct Business: Equatable, Codable {
     var organization_name: String
     var address: String
     var email: String
-    var phone: Int
+    var phone: String
 }

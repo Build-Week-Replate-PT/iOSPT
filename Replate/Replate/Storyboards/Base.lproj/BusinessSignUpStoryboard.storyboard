@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qwo-pR-sz0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cmu-Da-xQ9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ahM-s4-hXG" userLabel="Main Stack View">
-                                <rect key="frame" x="16" y="316.5" width="382" height="263.5"/>
+                                <rect key="frame" x="16" y="276.5" width="382" height="343.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJY-fX-Q4f">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="22.5"/>
@@ -64,39 +64,47 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="continuePressed:" destination="qwo-pR-sz0" eventType="touchUpInside" id="gJB-Iq-3Te"/>
-                                            <segue destination="S6V-j7-Dcp" kind="show" identifier="SecondFormSegue" id="FPh-lV-Doo"/>
                                         </connections>
                                     </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aHF-BX-uRo" userLabel="Log In Stack View">
-                                <rect key="frame" x="85" y="809" width="244" height="33"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vF-tK-IaB">
-                                        <rect key="frame" x="0.0" y="0.0" width="191" height="33"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <color key="textColor" red="0.050980392156862744" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-6m-OOw">
-                                        <rect key="frame" x="199" y="0.0" width="45" height="33"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
-                                        <state key="normal" title="Log In">
-                                            <color key="titleColor" red="0.050980392159999999" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginPressed:" destination="qwo-pR-sz0" eventType="touchUpInside" id="rw1-sh-0Qv"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bC9-Vw-Gav" userLabel="Login View">
+                                        <rect key="frame" x="0.0" y="293.5" width="382" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aHF-BX-uRo" userLabel="Log In Stack View">
+                                                <rect key="frame" x="69" y="0.0" width="244" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vF-tK-IaB">
+                                                        <rect key="frame" x="0.0" y="14.5" width="191" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <color key="textColor" red="0.050980392156862744" green="0.1764705882352941" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulj-6m-OOw">
+                                                        <rect key="frame" x="199" y="8.5" width="45" height="33"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                        <state key="normal" title="Log In">
+                                                            <color key="titleColor" red="0.050980392159999999" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <segue destination="fd0-wu-0Bx" kind="show" id="tnZ-ae-83p"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="aHF-BX-uRo" firstAttribute="top" secondItem="bC9-Vw-Gav" secondAttribute="top" id="0ha-Bf-4OK"/>
+                                            <constraint firstAttribute="bottom" secondItem="aHF-BX-uRo" secondAttribute="bottom" id="JIx-MQ-yuy"/>
+                                            <constraint firstItem="aHF-BX-uRo" firstAttribute="centerX" secondItem="bC9-Vw-Gav" secondAttribute="centerX" id="PA5-01-bdY"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="aHF-BX-uRo" firstAttribute="centerX" secondItem="KYl-Bo-8Zy" secondAttribute="centerX" id="JcC-QN-fRQ"/>
                             <constraint firstItem="ahM-s4-hXG" firstAttribute="centerY" secondItem="KYl-Bo-8Zy" secondAttribute="centerY" id="LSh-7C-wSK"/>
                             <constraint firstItem="ahM-s4-hXG" firstAttribute="leading" secondItem="8zH-7x-JZF" secondAttribute="leading" constant="16" id="RzT-p2-FVF"/>
-                            <constraint firstItem="8zH-7x-JZF" firstAttribute="bottom" secondItem="aHF-BX-uRo" secondAttribute="bottom" priority="999" constant="20" id="VYQ-Xo-Y4o"/>
                             <constraint firstItem="ahM-s4-hXG" firstAttribute="centerX" secondItem="KYl-Bo-8Zy" secondAttribute="centerX" id="c7w-CA-hc3"/>
                             <constraint firstItem="8zH-7x-JZF" firstAttribute="trailing" secondItem="ahM-s4-hXG" secondAttribute="trailing" constant="16" id="q2m-TW-kAV"/>
                         </constraints>
@@ -108,22 +116,33 @@
                         <outlet property="emailTextField" destination="Ui2-t3-cVw" id="nh7-u0-G1J"/>
                         <outlet property="passwordTextField" destination="0nD-SM-Df0" id="Xqo-dl-07h"/>
                         <outlet property="usernameTextField" destination="dkS-H5-dC7" id="Wc9-Vv-fxy"/>
+                        <segue destination="S6V-j7-Dcp" kind="show" identifier="SecondFormSegue" id="cod-x7-MdV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Se-2J-W7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="170" y="117"/>
+            <point key="canvasLocation" x="1079.7101449275362" y="116.51785714285714"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="dTg-eh-gxD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BusinessLogin" referencedIdentifier="Login" id="fd0-wu-0Bx" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="OkE-Og-6dc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Yb-5K-AYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1082" y="544"/>
         </scene>
         <!--Business Sign Up View Controller-->
         <scene sceneID="xSM-Uy-Vzf">
             <objects>
                 <viewController id="S6V-j7-Dcp" customClass="BusinessSignUpViewController" customModule="Replate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="brI-fa-yOa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="71W-h4-zDI" userLabel="Main Stack View">
-                                <rect key="frame" x="16" y="279.5" width="382" height="283.5"/>
+                                <rect key="frame" x="16" y="306.5" width="382" height="283.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A few more details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Da-ep-fsp">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="22.5"/>
@@ -191,11 +210,40 @@
                         <outlet property="businessNameTextField" destination="yuG-kS-gJ2" id="1fF-fK-Ehq"/>
                         <outlet property="cityStateZipcodeTextField" destination="Xta-kB-2fM" id="Wk2-u8-QWd"/>
                         <outlet property="phoneNumberTextField" destination="Sf9-vJ-SxR" id="t7c-XG-tH2"/>
+                        <segue destination="phy-Z8-WmW" kind="show" identifier="BusinessDashboardSegue" id="Eyv-il-ohw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yyk-0G-yVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032" y="117"/>
+            <point key="canvasLocation" x="1942.0289855072465" y="116.51785714285714"/>
+        </scene>
+        <!--BusinessDashboard-->
+        <scene sceneID="v6U-aK-VOE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BusinessDashboard" id="phy-Z8-WmW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="aJA-Lc-9uJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRA-U1-oHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2645" y="117"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lha-4D-are">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cmu-Da-xQ9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hdi-c7-LPV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qwo-pR-sz0" kind="relationship" relationship="rootViewController" id="gCv-fw-pZt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9N0-yg-DFJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>

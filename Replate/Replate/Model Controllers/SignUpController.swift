@@ -37,7 +37,7 @@ class SignUpController {
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
-                response.statusCode != 200 {
+                response.statusCode != 201 {
                 completion(NSError(domain: "", code: response.statusCode, userInfo: nil))
                 return
             }
@@ -61,10 +61,7 @@ class SignUpController {
                 return
             }
             
-            DispatchQueue.main.async {
-                completion(nil)
-            }
-            
+            completion(nil)
         }.resume()
     }
 }
