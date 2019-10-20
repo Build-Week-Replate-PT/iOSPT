@@ -18,6 +18,7 @@ class BusinessSignUpViewController: UIViewController {
     @IBOutlet weak var cityStateZipcodeTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
+    // for the first form information
     struct FirstForm {
         let username: String
         let email: String
@@ -34,7 +35,6 @@ class BusinessSignUpViewController: UIViewController {
         // hide the navigation controller
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func continuePressed(_ sender: Any) {
@@ -86,6 +86,7 @@ class BusinessSignUpViewController: UIViewController {
         let signUpRequest = SignUpRequest(username: firstForm.username, password: firstForm.password, organization_name: businessName, address: fullAddress, email: firstForm.email, phone: phoneNumber)
         
         signUpController.signUp(type: .business, with: signUpRequest) { (error) in
+            // this needs to be in the main thread because the app would crash if it's running in the bg thread
             DispatchQueue.main.async {
                 if let _ = error {
                     let alert = UIAlertController(title: "Something wrong", message: "Please try again.", preferredStyle: .alert)

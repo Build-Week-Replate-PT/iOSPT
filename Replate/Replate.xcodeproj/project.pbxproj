@@ -158,10 +158,10 @@
 		E3088C5623581890006F5B9D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */,
 				F31854132358DDB200AC829D /* BusinessDashBoardTableViewController.swift */,
 				F318541B2358F10300AC829D /* AddEditDonationViewController.swift */,
 				F318541D2358F12100AC829D /* DatePickerViewController.swift */,
-				E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */,
 				F31854192358F0E500AC829D /* DonationDetailViewController.swift */,
 				F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */,
 				F31854112358D65700AC829D /* PickupDetailViewController.swift */,
