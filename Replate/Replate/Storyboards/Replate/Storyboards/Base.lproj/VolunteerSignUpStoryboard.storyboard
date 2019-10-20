@@ -40,12 +40,12 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0nD-SM-Df0">
                                                 <rect key="frame" x="0.0" y="76" width="382" height="34"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRk-9S-aNa">
                                                 <rect key="frame" x="0.0" y="114" width="382" height="34"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -57,13 +57,12 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="S6V-j7-Dcp" kind="show" identifier="SecondFormSegue" id="FPh-lV-Doo"/>
+                                            <action selector="continuePressed:" destination="qwo-pR-sz0" eventType="touchUpInside" id="zmK-p7-k7q"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WGB-3w-ee3" userLabel="Login View">
@@ -116,6 +115,7 @@
                         <outlet property="emailTextField" destination="Ui2-t3-cVw" id="Tee-Vu-Umd"/>
                         <outlet property="passwordTextField" destination="0nD-SM-Df0" id="jJ0-Va-bO5"/>
                         <outlet property="usernameTextField" destination="dkS-H5-dC7" id="4rE-yK-4cd"/>
+                        <segue destination="S6V-j7-Dcp" kind="show" identifier="SecondFormSegue" id="dcV-Np-uCP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Se-2J-W7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -182,11 +182,13 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createPressed:" destination="S6V-j7-Dcp" eventType="touchUpInside" id="1Ou-QE-7IW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -206,7 +208,7 @@
                         <outlet property="businessNameTextField" destination="yuG-kS-gJ2" id="jlZ-gS-bln"/>
                         <outlet property="cityStateZipcodeTextField" destination="Xta-kB-2fM" id="qo1-d5-uxh"/>
                         <outlet property="phoneNumberTextField" destination="Sf9-vJ-SxR" id="B54-Lo-1O1"/>
-                        <segue destination="Fcc-bf-CbH" kind="show" id="0Qv-Sv-q6K"/>
+                        <segue destination="Fcc-bf-CbH" kind="show" identifier="VolunteerDashboardSegue" id="0Qv-Sv-q6K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yyk-0G-yVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
