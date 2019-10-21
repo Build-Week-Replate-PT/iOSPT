@@ -24,9 +24,9 @@
 		E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */; };
 		E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */; };
 		E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3870CDD235B493500C2B807 /* SignUpController.swift */; };
-		E3991102235BA37400FAD057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3991101235BA37400FAD057 /* Assets.xcassets */; };
 		E3991106235BA40500FAD057 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991105235BA40500FAD057 /* APIClient.swift */; };
 		E3991108235BA68A00FAD057 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991107235BA68A00FAD057 /* SignUpRequest.swift */; };
+		E399110C235D480C00FAD057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E399110B235D480C00FAD057 /* Assets.xcassets */; };
 		F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */; };
 		F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */; };
 		F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854112358D65700AC829D /* PickupDetailViewController.swift */; };
@@ -62,9 +62,9 @@
 		E3088C602358DC43006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Replate/Storyboards/Base.lproj/VolunteerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSignUpViewController.swift; sourceTree = "<group>"; };
 		E3870CDD235B493500C2B807 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
-		E3991101235BA37400FAD057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3991105235BA40500FAD057 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		E3991107235BA68A00FAD057 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		E399110B235D480C00FAD057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerDashboardTableViewController.swift; sourceTree = "<group>"; };
 		F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerScheduleTableViewController.swift; sourceTree = "<group>"; };
 		F31854112358D65700AC829D /* PickupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupDetailViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 		5744991C2356CFB000147D81 /* Replate */ = {
 			isa = PBXGroup;
 			children = (
+				E399110B235D480C00FAD057 /* Assets.xcassets */,
 				D667E4252357F88F005CBCB3 /* Models */,
 				D6A0C5AB2359683100D9B7E6 /* Model Controllers */,
 				D6A0C5A62359678C00D9B7E6 /* Views */,
@@ -248,7 +249,7 @@
 			files = (
 				D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */,
 				E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */,
-				E3991102235BA37400FAD057 /* Assets.xcassets in Resources */,
+				E399110C235D480C00FAD057 /* Assets.xcassets in Resources */,
 				F39C8EF92358C8870025CEE6 /* VolunteerDashboard.storyboard in Resources */,
 				F39A4CE12358F9EE00E58609 /* Main.storyboard in Resources */,
 				5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */,
@@ -462,7 +463,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vicxruiz.Replate;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambda.replate-bw2pt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -479,7 +480,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = vicxruiz.Replate;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lambda.replate-bw2pt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
