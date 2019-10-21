@@ -42,8 +42,8 @@ class VolunteerSignUpViewController: UIViewController {
         self.cityStateZipcodeTextField?.delegate = self
         self.phoneNumberTextField?.delegate = self
         
-        // hide the navigation controller
-        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        // hide the navigation bar line
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
     }
      
     @IBAction func continuePressed(_ sender: Any) {
