@@ -26,8 +26,8 @@
 		E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3870CDD235B493500C2B807 /* SignUpController.swift */; };
 		E3991106235BA40500FAD057 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991105235BA40500FAD057 /* APIClient.swift */; };
 		E3991108235BA68A00FAD057 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991107235BA68A00FAD057 /* SignUpRequest.swift */; };
-		E399110C235D480C00FAD057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E399110B235D480C00FAD057 /* Assets.xcassets */; };
 		E399110A235C03C300FAD057 /* VolunteerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991109235C03C300FAD057 /* VolunteerSignUpViewController.swift */; };
+		E399110C235D480C00FAD057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E399110B235D480C00FAD057 /* Assets.xcassets */; };
 		F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */; };
 		F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */; };
 		F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854112358D65700AC829D /* PickupDetailViewController.swift */; };
@@ -65,8 +65,8 @@
 		E3870CDD235B493500C2B807 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		E3991105235BA40500FAD057 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		E3991107235BA68A00FAD057 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
-		E399110B235D480C00FAD057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3991109235C03C300FAD057 /* VolunteerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerSignUpViewController.swift; sourceTree = "<group>"; };
+		E399110B235D480C00FAD057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerDashboardTableViewController.swift; sourceTree = "<group>"; };
 		F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerScheduleTableViewController.swift; sourceTree = "<group>"; };
 		F31854112358D65700AC829D /* PickupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupDetailViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,6 @@
 				E3088C5C2358DBCC006F5B9D /* Storyboards */,
 				5744991D2356CFB000147D81 /* AppDelegate.swift */,
 				5744991F2356CFB000147D81 /* SceneDelegate.swift */,
-				E3991101235BA37400FAD057 /* Assets.xcassets */,
 				5744992B2356CFBE00147D81 /* Info.plist */,
 			);
 			path = Replate;

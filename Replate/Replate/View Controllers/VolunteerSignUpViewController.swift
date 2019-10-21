@@ -17,6 +17,7 @@ class VolunteerSignUpViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var cityStateZipcodeTextField: UITextField!
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    @IBOutlet weak var createAccountButton: UIButton!
     
     // for the first form information
     struct FirstForm {
@@ -32,12 +33,19 @@ class VolunteerSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.usernameTextField?.delegate = self
+        self.emailTextField?.delegate = self
+        self.passwordTextField?.delegate = self
+        self.confirmPasswordTextField?.delegate = self
+        self.businessNameTextField?.delegate = self
+        self.addressTextField?.delegate = self
+        self.cityStateZipcodeTextField?.delegate = self
+        self.phoneNumberTextField?.delegate = self
         
         // hide the navigation controller
         self.navigationController?.setNavigationBarHidden(true, animated: true)
-
     }
-    
+     
     @IBAction func continuePressed(_ sender: Any) {
         // check if all textfields are filled
         guard let username = self.usernameTextField.text, !username.isEmpty,
@@ -86,6 +94,8 @@ class VolunteerSignUpViewController: UIViewController {
         guard let firstForm = self.firstForm else { return }
         let signUpRequest = SignUpRequest(username: firstForm.username, password: firstForm.password, organization_name: businessName, address: fullAddress, email: firstForm.email, phone: phoneNumber)
         
+        // disable the button so the user won't press it more than once
+        self.createAccountButton.isEnabled = false
         signUpController.signUp(type: .business, with: signUpRequest) { (error) in
             // this needs to be in the main thread because the app would crash if it's running in the bg thread
             DispatchQueue.main.async {
@@ -93,6 +103,8 @@ class VolunteerSignUpViewController: UIViewController {
                     let alert = UIAlertController(title: "Something wrong", message: "Please try again.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
+                    // enable the button if there is an error
+                    self.createAccountButton.isEnabled = true
                     return
                 } else {
                     // navigate to the business dashboard
@@ -110,5 +122,17 @@ class VolunteerSignUpViewController: UIViewController {
             guard let vc = segue.destination as? VolunteerSignUpViewController else { return }
             vc.firstForm = self.firstForm
         }
+    }
+}
+
+
+extension VolunteerSignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextTextField = self.view.viewWithTag(textField.tag + 1) {
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
     }
 }

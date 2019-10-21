@@ -17,6 +17,7 @@ class BusinessSignUpViewController: UIViewController {
     @IBOutlet weak var addressTextField: UITextField?
     @IBOutlet weak var cityStateZipcodeTextField: UITextField?
     @IBOutlet weak var phoneNumberTextField: UITextField?
+    @IBOutlet weak var createAccountButton: UIButton!
     
     // for the first form information
     struct FirstForm {
@@ -27,6 +28,7 @@ class BusinessSignUpViewController: UIViewController {
     }
     
     var firstForm: FirstForm?
+    // we should consolidate the controller at the end
     private let signUpController: SignUpController = SignUpController()
     
     override func viewDidLoad() {
@@ -93,6 +95,8 @@ class BusinessSignUpViewController: UIViewController {
         guard let firstForm = self.firstForm else { return }
         let signUpRequest = SignUpRequest(username: firstForm.username, password: firstForm.password, organization_name: businessName, address: fullAddress, email: firstForm.email, phone: phoneNumber)
         
+        // disable the button so the user won't press it more than once
+        self.createAccountButton.isEnabled = false
         signUpController.signUp(type: .business, with: signUpRequest) { (error) in
             // this needs to be in the main thread because the app would crash if it's running in the bg thread
             DispatchQueue.main.async {
@@ -100,6 +104,8 @@ class BusinessSignUpViewController: UIViewController {
                     let alert = UIAlertController(title: "Something wrong", message: "Please try again.", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
+                    // enable the button if there is an error
+                    self.createAccountButton.isEnabled = true
                     return
                 } else {
                     // navigate to the business dashboard

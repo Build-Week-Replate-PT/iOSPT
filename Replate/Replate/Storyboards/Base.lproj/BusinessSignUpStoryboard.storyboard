@@ -209,6 +209,7 @@
                         <outlet property="addressTextField" destination="9SA-Ka-EUH" id="N1z-d8-Mk1"/>
                         <outlet property="businessNameTextField" destination="yuG-kS-gJ2" id="1fF-fK-Ehq"/>
                         <outlet property="cityStateZipcodeTextField" destination="Xta-kB-2fM" id="Wk2-u8-QWd"/>
+                        <outlet property="createAccountButton" destination="4V7-0m-eBk" id="0X3-1G-YjT"/>
                         <outlet property="phoneNumberTextField" destination="Sf9-vJ-SxR" id="t7c-XG-tH2"/>
                         <segue destination="phy-Z8-WmW" kind="show" identifier="BusinessDashboardSegue" id="Eyv-il-ohw"/>
                     </connections>
