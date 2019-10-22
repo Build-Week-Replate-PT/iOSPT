@@ -102,6 +102,50 @@ class FoodController {
         }.resume()
     }
     
+    func createDonation(with donation: Food, completion: @escaping (Result<Food, NetworkError>) -> Void) {
+        guard let token = token else {
+            completion(.failure(.noAuth))
+            return
+        }
+        
+        var request = URLRequest(url: baseURL)
+        request.httpMethod = HTTPMethod.post.rawValue
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Token \(token)", forHTTPHeaderField: "Authorization")
+        
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.dateEncodingStrategy = .iso8601
+        do {
+            
+            let jsonData = try jsonEncoder.encode(donation)
+            request.httpBody = jsonData
+            print(donation)
+        } catch {
+            print("Error encoding gig object: \(error.localizedDescription)")
+            completion(.failure(.otherError))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+            
+            self.donations.append(donation)
+            completion(.success(donation))
+            
+        }.resume()
+    }
+    
+    
+    
+    
     // MARK: Volunteer user functions
     
 }
