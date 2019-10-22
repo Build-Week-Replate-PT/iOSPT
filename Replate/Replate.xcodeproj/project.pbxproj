@@ -156,9 +156,8 @@
 			isa = PBXGroup;
 			children = (
 				E3870CDD235B493500C2B807 /* SignUpController.swift */,
-				D6A0C5AC2359684800D9B7E6 /* LoginController.swift */,
 				E3991105235BA40500FAD057 /* APIClient.swift */,
-				D6A0C5AC2359684800D9B7E6 /* VolunteerController.swift */,
+				D6A0C5AC2359684800D9B7E6 /* LoginController.swift */,
 				F375D97F235970720093572D /* FoodController.swift */,
 			);
 			path = "Model Controllers";
@@ -294,7 +293,7 @@
 				F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */,
 				F318541A2358F0E500AC829D /* DonationDetailViewController.swift in Sources */,
 				D6A0C5AD2359684800D9B7E6 /* LoginController.swift in Sources */,
-				D6A0C5AD2359684800D9B7E6 /* VolunteerController.swift in Sources */,
+				D6A0C5AD2359684800D9B7E6 /* LoginController.swift in Sources */,
 				F375D980235970720093572D /* FoodController.swift in Sources */,
 				F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */,
 				E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */,
@@ -477,6 +476,7 @@
 		5744992F2356CFBE00147D81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = Replate/Info.plist;
@@ -494,6 +494,7 @@
 		574499302356CFBE00147D81 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = Replate/Info.plist;
