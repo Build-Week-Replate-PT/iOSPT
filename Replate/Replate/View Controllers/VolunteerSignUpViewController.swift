@@ -1,5 +1,5 @@
 //
-//  BusinessSignUpViewController.swift
+//  VolunteerSignUpViewController.swift
 //  Replate
 //
 //  Created by Vici Shaweddy on 10/17/19.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class BusinessSignUpViewController: UIViewController {
-    @IBOutlet weak var usernameTextField: UITextField?
-    @IBOutlet weak var emailTextField: UITextField?
-    @IBOutlet weak var passwordTextField: UITextField?
-    @IBOutlet weak var confirmPasswordTextField: UITextField?
-    @IBOutlet weak var businessNameTextField: UITextField?
-    @IBOutlet weak var addressTextField: UITextField?
-    @IBOutlet weak var cityStateZipcodeTextField: UITextField?
-    @IBOutlet weak var phoneNumberTextField: UITextField?
+class VolunteerSignUpViewController: UIViewController {
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var businessNameTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityStateZipcodeTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var createAccountButton: UIButton!
     
     // for the first form information
@@ -44,15 +44,14 @@ class BusinessSignUpViewController: UIViewController {
         
         // hide the navigation bar line
         self.navigationController?.navigationBar.shouldRemoveShadow(true)
-
     }
-    
+     
     @IBAction func continuePressed(_ sender: Any) {
         // check if all textfields are filled
-        guard let username = self.usernameTextField?.text, !username.isEmpty,
-            let email = self.emailTextField?.text, !email.isEmpty,
-            let password = self.passwordTextField?.text, !password.isEmpty,
-            let confirmPassword = self.confirmPasswordTextField?.text, !confirmPassword.isEmpty else
+        guard let username = self.usernameTextField.text, !username.isEmpty,
+            let email = self.emailTextField.text, !email.isEmpty,
+            let password = self.passwordTextField.text, !password.isEmpty,
+            let confirmPassword = self.confirmPasswordTextField.text, !confirmPassword.isEmpty else
         {
                 let alert = UIAlertController(title: "Missing some fields", message: "Check your information and try again.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -77,10 +76,10 @@ class BusinessSignUpViewController: UIViewController {
     
     @IBAction func createPressed(_ sender: Any) {
         // check if all textfields are filled
-        guard let businessName = self.businessNameTextField?.text, !businessName.isEmpty,
-            let address = self.addressTextField?.text, !address.isEmpty,
-            let cityStateZipcode = self.cityStateZipcodeTextField?.text, !cityStateZipcode.isEmpty,
-            let phoneNumber = self.phoneNumberTextField?.text, !phoneNumber.isEmpty else
+        guard let businessName = self.businessNameTextField.text, !businessName.isEmpty,
+            let address = self.addressTextField.text, !address.isEmpty,
+            let cityStateZipcode = self.cityStateZipcodeTextField.text, !cityStateZipcode.isEmpty,
+            let phoneNumber = self.phoneNumberTextField.text, !phoneNumber.isEmpty else
         {
                 let alert = UIAlertController(title: "Missing some fields", message: "Check your information and try again.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -120,13 +119,14 @@ class BusinessSignUpViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SecondFormSegue" {
-            guard let vc = segue.destination as? BusinessSignUpViewController else { return }
+            guard let vc = segue.destination as? VolunteerSignUpViewController else { return }
             vc.firstForm = self.firstForm
         }
     }
 }
 
-extension BusinessSignUpViewController: UITextFieldDelegate {
+
+extension VolunteerSignUpViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let nextTextField = self.view.viewWithTag(textField.tag + 1) {
             nextTextField.becomeFirstResponder()

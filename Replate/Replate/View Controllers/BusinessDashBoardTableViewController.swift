@@ -38,9 +38,6 @@ class BusinessDashBoardTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "donationCell", for: indexPath)
-        
-        
-
         return cell
     }
     
