@@ -1,19 +1,15 @@
 //
-//  Volunteer.swift
+//  SignUpRequest.swift
 //  Replate
 //
-//  Created by Michael Stoffer on 10/17/19.
+//  Created by Vici Shaweddy on 10/19/19.
 //  Copyright © 2019 Victor . All rights reserved.
 //
 
 import Foundation
 
-struct VolunteerUser: Equatable, Codable {
-    var user: Volunteer
-}
-
-struct Volunteer: Equatable, Codable {
-    var id: Int
+// The request is different from the response
+struct SignUpRequest: Equatable, Codable {
     var username: String
     var password: String
     var organization_name: String
@@ -21,4 +17,3 @@ struct Volunteer: Equatable, Codable {
     var email: String
     var phone: String
 }
-
