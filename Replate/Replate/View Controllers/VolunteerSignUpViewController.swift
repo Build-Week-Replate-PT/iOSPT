@@ -108,7 +108,7 @@ class VolunteerSignUpViewController: UIViewController {
                     return
                 } else {
                     // navigate to the business dashboard
-                    self.performSegue(withIdentifier: "BusinessDashboardSegue", sender: self)
+                    self.performSegue(withIdentifier: "VolunteerDashboardSegue", sender: self)
                 }
             }
         }
