@@ -7,17 +7,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Roboto-Black.ttf">
-            <string>Roboto-Black</string>
-        </array>
         <array key="Roboto-Bold.ttf">
             <string>Roboto-Bold</string>
         </array>
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
-        </array>
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -30,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="1cd-Qi-X6G">
-                                <rect key="frame" x="57" y="215" width="300" height="466"/>
+                                <rect key="frame" x="57" y="265" width="300" height="366"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I want to..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="407-tx-VRG">
                                         <rect key="frame" x="98" y="0.0" width="104" height="26"/>
@@ -116,38 +110,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzs-tG-XFx" userLabel="Login View">
-                                        <rect key="frame" x="0.0" y="416" width="300" height="50"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cYx-gC-gA6" userLabel="Log In Stack View">
-                                                <rect key="frame" x="33" y="0.0" width="234.5" height="50"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="poD-kD-3XQ">
-                                                        <rect key="frame" x="0.0" y="15.5" width="181.5" height="19"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                                        <color key="textColor" red="0.050980392159999999" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3IP-1W-ori">
-                                                        <rect key="frame" x="189.5" y="9.5" width="45" height="31"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="16"/>
-                                                        <state key="normal" title="Log In">
-                                                            <color key="titleColor" red="0.050980392159999999" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="5KA-1C-O4Q" kind="show" id="YY3-sJ-CEF"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="cYx-gC-gA6" secondAttribute="bottom" id="YsB-Kx-v9P"/>
-                                            <constraint firstItem="cYx-gC-gA6" firstAttribute="top" secondItem="qzs-tG-XFx" secondAttribute="top" id="q2M-6e-oU7"/>
-                                            <constraint firstItem="cYx-gC-gA6" firstAttribute="centerX" secondItem="qzs-tG-XFx" secondAttribute="centerX" id="zA4-xb-gt5"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="yQ7-vy-FDA" firstAttribute="leading" secondItem="1cd-Qi-X6G" secondAttribute="leadingMargin" id="Ss9-ja-IGJ"/>
@@ -185,16 +147,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YII-Lu-pMy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="822" y="123"/>
-        </scene>
-        <!--BusinessLogin-->
-        <scene sceneID="2sy-UM-G0u">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BusinessLogin" id="5KA-1C-O4Q" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="6rW-Ox-yyx"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gqn-Kw-nSi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="762" y="161"/>
         </scene>
     </scenes>
     <resources>
