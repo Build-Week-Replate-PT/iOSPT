@@ -16,6 +16,11 @@ class BusinessLoginViewController: UIViewController {
     
     let loginController = LoginController()
     
+    override func viewDidLoad() {
+        // hide the navigation bar line
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+    }
+    
     // MARK: - Actions and Methods
     @IBAction func login(_ sender: UIButton) {
         guard let username = usernameTextField.text, !username.isEmpty,

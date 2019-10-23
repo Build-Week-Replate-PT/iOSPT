@@ -21,6 +21,7 @@ class BusinessDashBoardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.leftBarButtonItem = nil
     }
 
     // MARK: - Table view data source
