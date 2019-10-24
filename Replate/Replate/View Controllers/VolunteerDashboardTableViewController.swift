@@ -13,6 +13,7 @@ class VolunteerDashboardTableViewController: UITableViewController {
     // MARK: - Properties
     
     var loginController: LoginController?
+    var foodController: FoodController = FoodController()
 
     // Test cells to check that UI is working
     var testCells = [
@@ -21,6 +22,15 @@ class VolunteerDashboardTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.foodController.fetchAllDonations { (result) in
+            switch result {
+            case .success(let donations):
+                print(donations)
+            case .failure(let error):
+                print("Error fetching all donations: \(error)")
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
