@@ -11,8 +11,8 @@ import UIKit
 class VolunteerScheduleTableViewController: UITableViewController {
 
     // Test cells to check that UI is working
-    var testCells = [
-            TestCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
+    var donations = [
+            Donation(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
     ]
     
     override func viewDidLoad() {
@@ -29,12 +29,12 @@ class VolunteerScheduleTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return testCells.count
+        return donations.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return testCells.count
+        return donations.count
     }
 
     

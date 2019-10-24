@@ -39,7 +39,7 @@
 		F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */; };
 		F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854112358D65700AC829D /* PickupDetailViewController.swift */; };
 		F31854142358DDB200AC829D /* BusinessDashBoardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854132358DDB200AC829D /* BusinessDashBoardTableViewController.swift */; };
-		F31854162358EA1700AC829D /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854152358EA1700AC829D /* TestCell.swift */; };
+		F31854162358EA1700AC829D /* Donation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854152358EA1700AC829D /* Donation.swift */; };
 		F31854182358EB9100AC829D /* DonationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854172358EB9100AC829D /* DonationTableViewCell.swift */; };
 		F318541A2358F0E500AC829D /* DonationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854192358F0E500AC829D /* DonationDetailViewController.swift */; };
 		F318541C2358F10300AC829D /* AddEditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318541B2358F10300AC829D /* AddEditDonationViewController.swift */; };
@@ -86,7 +86,7 @@
 		F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerScheduleTableViewController.swift; sourceTree = "<group>"; };
 		F31854112358D65700AC829D /* PickupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupDetailViewController.swift; sourceTree = "<group>"; };
 		F31854132358DDB200AC829D /* BusinessDashBoardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDashBoardTableViewController.swift; sourceTree = "<group>"; };
-		F31854152358EA1700AC829D /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
+		F31854152358EA1700AC829D /* Donation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donation.swift; sourceTree = "<group>"; };
 		F31854172358EB9100AC829D /* DonationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationTableViewCell.swift; sourceTree = "<group>"; };
 		F31854192358F0E500AC829D /* DonationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailViewController.swift; sourceTree = "<group>"; };
 		F318541B2358F10300AC829D /* AddEditDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditDonationViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 				D650F2E5235948DC009FEF4E /* Token.swift */,
 				D650F2E3235945C8009FEF4E /* Volunteer.swift */,
 				D650F2E923594F89009FEF4E /* Business.swift */,
+				F31854152358EA1700AC829D /* Donation.swift */,
 				D650F2E723594B57009FEF4E /* Food.swift */,
 				E3991107235BA68A00FAD057 /* SignUpRequest.swift */,
 			);
@@ -158,7 +159,6 @@
 		D6A0C5A62359678C00D9B7E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F31854152358EA1700AC829D /* TestCell.swift */,
 				F31854172358EB9100AC829D /* DonationTableViewCell.swift */,
 				F39C8EF22358BFEE0025CEE6 /* ShadowView.swift */,
 			);
@@ -318,7 +318,7 @@
 				D6A0C5B1235B716B00D9B7E6 /* VolunteerLoginViewController.swift in Sources */,
 				F39C8EF32358BFEE0025CEE6 /* ShadowView.swift in Sources */,
 				F31854182358EB9100AC829D /* DonationTableViewCell.swift in Sources */,
-				F31854162358EA1700AC829D /* TestCell.swift in Sources */,
+				F31854162358EA1700AC829D /* Donation.swift in Sources */,
 				D6A0C5B3235B717500D9B7E6 /* BusinessLoginViewController.swift in Sources */,
 				E3991106235BA40500FAD057 /* APIClient.swift in Sources */,
 				F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */,

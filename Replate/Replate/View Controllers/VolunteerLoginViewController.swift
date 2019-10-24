@@ -15,7 +15,7 @@ class VolunteerLoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let loginController = LoginController()
+    var loginController = LoginController.shared
     
     override func viewDidLoad() {
         // hide the navigation bar line
@@ -29,13 +29,15 @@ class VolunteerLoginViewController: UIViewController {
             let password = passwordTextField.text, !password.isEmpty else { return }
         
         loginController.login(type: .volunteer, withUsername: username, withPassword: password) { (error) in
-            if let error = error {
-                NSLog("Error occurred during login: \(error)")
-            }
             
             DispatchQueue.main.async {
-                self.usernameTextField.text = nil
-                self.passwordTextField.text = nil
+                if let error = error {
+                    NSLog("Error occurred during login: \(error)")
+                } else {
+                    self.usernameTextField.text = nil
+                    self.passwordTextField.text = nil
+                    self.performSegue(withIdentifier: "VolunteerLoginToDashboard", sender: self)
+                }
             }
         }
     }
@@ -43,10 +45,9 @@ class VolunteerLoginViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "VolunteerLoginToDashboard" {
-            guard let dashVC = segue.destination as? VolunteerDashboardTableViewController else { return }
-            dashVC.loginController = self.loginController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "VolunteerLoginToDashboard" {
+//
+//        }
+//    }
 }

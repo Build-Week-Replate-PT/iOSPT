@@ -13,13 +13,14 @@ class FoodController {
     // MARK: Properties
     typealias CompletionHandler = (Result<[String], NetworkError>) -> Void
     var donations: [Food] = []
-    var token = LoginController.token
+    var loginController = LoginController.shared
+    var tokenResponse: TokenResponse? = LoginController.shared.token
     let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/food")!
-
+    
     // MARK: Business User functions
     // List all donations created by user
     func fetchBusinessDonations(completion: @escaping CompletionHandler) {
-        guard let token = token else {
+        guard let token = tokenResponse else {
             completion(.failure(.noAuth))
             return
         }
@@ -61,7 +62,7 @@ class FoodController {
     
     // User can create a new donation
     func createDonation(with donation: Food, completion: @escaping (Result<Food, NetworkError>) -> Void) {
-        guard let token = token else {
+        guard let token = tokenResponse else {
             completion(.failure(.noAuth))
             return
         }
@@ -109,16 +110,16 @@ class FoodController {
     // MARK: Volunteer user functions
     
     // List all donations created by business users
-    func fetchAllDonations(completion: @escaping CompletionHandler) {
+    func fetchAllDonations(completion: @escaping (Result<[Food], NetworkError>) -> Void) {
         // Check for User Token
-        guard let token = token else {
+        guard let tokenResponse = tokenResponse else {
             completion(.failure(.noAuth))
             return
         }
         
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.setValue("Token \(token.token)", forHTTPHeaderField: "Authorization")
+        request.setValue(tokenResponse.token, forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
@@ -140,9 +141,9 @@ class FoodController {
             let decoder = JSONDecoder()
             
             do {
-                let donations = try decoder.decode([String].self, from: data)
+                let donations = try decoder.decode([Food].self, from: data)
                 completion(.success(donations))
-                
+
             } catch {
                 print("Error decoding donations: \(error)")
                 completion(.failure(.noDecode))
@@ -154,7 +155,7 @@ class FoodController {
     
     // List all donations claimed by volunteer
     func fetchClaimedDonations(completion: @escaping CompletionHandler) {
-        guard let token = token else {
+        guard let token = tokenResponse else {
             completion(.failure(.noAuth))
             return
         }

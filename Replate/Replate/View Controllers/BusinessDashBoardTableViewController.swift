@@ -12,10 +12,10 @@ class BusinessDashBoardTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var loginController: LoginController?
+    var loginController = LoginController.shared
     
-    var testCells = [
-        TestCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
+    var donations = [
+        Donation(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
 ]
 
     override func viewDidLoad() {
@@ -26,14 +26,14 @@ class BusinessDashBoardTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return testCells.count
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return donations.count
+//    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return testCells.count
+        return donations.count
     }
 
    
