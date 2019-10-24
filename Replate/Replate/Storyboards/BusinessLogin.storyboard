@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tma-gd-Vea">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TDn-NP-QS3">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdw-LG-7ib">
-                                <rect key="frame" x="102.66666666666667" y="211" width="169.66666666666663" height="58.666666666666686"/>
+                                <rect key="frame" x="102.66666666666667" y="167" width="169.66666666666663" height="58.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qpo-Ko-kpq">
-                                <rect key="frame" x="24" y="333.66666666666669" width="327" height="72"/>
+                                <rect key="frame" x="24" y="289.66666666666669" width="327" height="72"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ykl-3l-FF2">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="34"/>
@@ -54,7 +54,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cel-z1-aWH">
-                                <rect key="frame" x="24" y="464.66666666666669" width="327" height="46"/>
+                                <rect key="frame" x="24" y="420.66666666666669" width="327" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="pLh-qz-jVp"/>
                                 </constraints>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-pd-BPx">
-                                <rect key="frame" x="75.333333333333329" y="529.66666666666663" width="224.66666666666669" height="31"/>
+                                <rect key="frame" x="75.333333333333329" y="485.66666666666669" width="224.66666666666669" height="31.000000000000057"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCG-g4-dap">
                                         <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="31"/>
@@ -133,24 +133,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HbH-Nr-6s5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1683" y="214"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8if-hd-eWo">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tma-gd-Vea" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gOa-IH-mXE">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TDn-NP-QS3" kind="relationship" relationship="rootViewController" id="Xfi-uq-l0o"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Pi-QV-5OB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="103.2" y="158.86699507389164"/>
         </scene>
     </scenes>
     <resources>
