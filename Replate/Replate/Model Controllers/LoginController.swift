@@ -12,7 +12,7 @@ class LoginController {
     typealias CompletionHandler = (Error?) -> Void
     
     private let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/auth/")!
-    static var token: Token?
+    var token: TokenResponse?
     
     func login(type: UserType, withUsername username: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
         let requestURL = baseURL.appendingPathComponent("\(type.rawValue)/login")
@@ -25,6 +25,7 @@ class LoginController {
             let userParams = ["username": username, "password": password] as [String: Any]
             let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
             request.httpBody = json
+            print(request)
         } catch {
             print("Error encoding user object: \(error)")
         }
@@ -42,7 +43,7 @@ class LoginController {
             let decoder = JSONDecoder()
             
             do {
-                LoginController.token = try decoder.decode(Token.self, from: data)
+                self.token = try decoder.decode(TokenResponse.self, from: data)
             } catch {
                 print("Error decoding bearer object: \(error)")
                 completion(error)
