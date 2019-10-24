@@ -16,4 +16,5 @@ struct Food: Equatable, Codable {
     var pickup_date: Date
     var business_id: Int
     var volunteer_id: Int
+    
 }

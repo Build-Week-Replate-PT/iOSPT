@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "A2F73A53-6559-4D45-984A-4359FF426DEF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD88DF98-2419-4944-B7C5-9E5FAC4EB23A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Replate/View Controllers/BusinessSignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "BD88DF98-2419-4944-B7C5-9E5FAC4EB23A - 42672ea597482d21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Replate.BusinessSignUpViewController.createPressed(Any) -&gt; ()"
+                  moduleName = "Replate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vicishaweddy/src/Lambda%20School/W15_S08BW/replate-ios/Replate/Replate/View%20Controllers/BusinessSignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "158">
+               </Location>
+               <Location
+                  uuid = "BD88DF98-2419-4944-B7C5-9E5FAC4EB23A - e59239bf3c325c27"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Replate.BusinessSignUpViewController.createPressed(Any) -&gt; ()"
+                  moduleName = "Replate"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vicishaweddy/src/Lambda%20School/W15_S08BW/replate-ios/Replate/Replate/View%20Controllers/BusinessSignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D51020B-CA3D-49C9-A43F-81F990873CDE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Replate/View Controllers/BusinessSignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

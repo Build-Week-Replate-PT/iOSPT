@@ -20,6 +20,8 @@ class BusinessDashBoardTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.leftBarButtonItem = nil
     }
 
     // MARK: - Table view data source
@@ -37,9 +39,6 @@ class BusinessDashBoardTableViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "donationCell", for: indexPath)
-        
-        
-
         return cell
     }
     

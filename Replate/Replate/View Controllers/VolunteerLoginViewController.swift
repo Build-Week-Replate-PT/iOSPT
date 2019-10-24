@@ -17,13 +17,18 @@ class VolunteerLoginViewController: UIViewController {
     
     let loginController = LoginController()
     
+    override func viewDidLoad() {
+        // hide the navigation bar line
+        self.navigationController?.navigationBar.shouldRemoveShadow(true)
+    }
+    
     // MARK: - Actions and Methods
     
     @IBAction func login(_ sender: UIButton) {
         guard let username = usernameTextField.text, !username.isEmpty,
             let password = passwordTextField.text, !password.isEmpty else { return }
         
-        loginController.login(type: "volunteer", withUsername: username, withPassword: password) { (error) in
+        loginController.login(type: .volunteer, withUsername: username, withPassword: password) { (error) in
             if let error = error {
                 NSLog("Error occurred during login: \(error)")
             }

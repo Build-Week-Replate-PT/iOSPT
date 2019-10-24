@@ -8,29 +8,14 @@
 
 import Foundation
 
-enum HTTPMethod: String {
-    case get = "GET"
-    case post = "POST"
-    case put = "PUT"
-    case delete = "DELETE"
-}
-
-enum NetworkError: Error {
-    case noAuth
-    case badAuth
-    case otherError
-    case badData
-    case noDecode
-}
-
 class LoginController {
     typealias CompletionHandler = (Error?) -> Void
     
     private let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/auth/")!
     var token: Token?
     
-    func login(type: String, withUsername username: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
-        let requestURL = baseURL.appendingPathComponent("\(type)/login")
+    func login(type: UserType, withUsername username: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
+        let requestURL = baseURL.appendingPathComponent("\(type.rawValue)/login")
         
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.post.rawValue

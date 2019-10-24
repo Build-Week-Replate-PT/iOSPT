@@ -23,7 +23,18 @@
 		E3088C592358773D006F5B9D /* BusinessSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */; };
 		E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */; };
 		E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */; };
+		E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3870CDD235B493500C2B807 /* SignUpController.swift */; };
+		E3991106235BA40500FAD057 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991105235BA40500FAD057 /* APIClient.swift */; };
+		E3991108235BA68A00FAD057 /* SignUpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991107235BA68A00FAD057 /* SignUpRequest.swift */; };
+		E399110A235C03C300FAD057 /* VolunteerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3991109235C03C300FAD057 /* VolunteerSignUpViewController.swift */; };
 		E399110C235D480C00FAD057 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E399110B235D480C00FAD057 /* Assets.xcassets */; };
+		E39946CD235E5DFD00EA50ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39946CC235E5DFD00EA50ED /* Extensions.swift */; };
+		E39946D0235F790000EA50ED /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39946CF235F790000EA50ED /* Roboto-Black.ttf */; };
+		E39946D2235F790E00EA50ED /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39946D1235F790E00EA50ED /* Roboto-Bold.ttf */; };
+		E39946D4235F793700EA50ED /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39946D3235F793700EA50ED /* Roboto-Light.ttf */; };
+		E39946D6235F794500EA50ED /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39946D5235F794500EA50ED /* Roboto-Medium.ttf */; };
+		E39946D8235F794E00EA50ED /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39946D7235F794E00EA50ED /* Roboto-Regular.ttf */; };
+		E39946DA235F795900EA50ED /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E39946D9235F795900EA50ED /* Roboto-Thin.ttf */; };
 		F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */; };
 		F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */; };
 		F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854112358D65700AC829D /* PickupDetailViewController.swift */; };
@@ -33,6 +44,7 @@
 		F318541A2358F0E500AC829D /* DonationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31854192358F0E500AC829D /* DonationDetailViewController.swift */; };
 		F318541C2358F10300AC829D /* AddEditDonationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318541B2358F10300AC829D /* AddEditDonationViewController.swift */; };
 		F318541E2358F12100AC829D /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F318541D2358F12100AC829D /* DatePickerViewController.swift */; };
+		F375D980235970720093572D /* FoodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F375D97F235970720093572D /* FoodController.swift */; };
 		F39A4CD92358F9B900E58609 /* BusinessDashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A4CDB2358F9B900E58609 /* BusinessDashboard.storyboard */; };
 		F39A4CE12358F9EE00E58609 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A4CE02358F9E100E58609 /* Main.storyboard */; };
 		F39C8EF32358BFEE0025CEE6 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39C8EF22358BFEE0025CEE6 /* ShadowView.swift */; };
@@ -58,7 +70,18 @@
 		E3088C5A2358773D006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BusinessSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		E3088C602358DC43006F5B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Replate/Storyboards/Base.lproj/VolunteerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessSignUpViewController.swift; sourceTree = "<group>"; };
+		E3870CDD235B493500C2B807 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		E3991105235BA40500FAD057 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		E3991107235BA68A00FAD057 /* SignUpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequest.swift; sourceTree = "<group>"; };
+		E3991109235C03C300FAD057 /* VolunteerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolunteerSignUpViewController.swift; sourceTree = "<group>"; };
 		E399110B235D480C00FAD057 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E39946CC235E5DFD00EA50ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E39946CF235F790000EA50ED /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Black.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Black.ttf"; sourceTree = "<group>"; };
+		E39946D1235F790E00EA50ED /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		E39946D3235F793700EA50ED /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		E39946D5235F794500EA50ED /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Medium.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		E39946D7235F794E00EA50ED /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		E39946D9235F795900EA50ED /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Thin.ttf"; path = "../../../../../../../Downloads/roboto/Roboto-Thin.ttf"; sourceTree = "<group>"; };
 		F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerDashboardTableViewController.swift; sourceTree = "<group>"; };
 		F318540F2358D62C00AC829D /* VolunteerScheduleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerScheduleTableViewController.swift; sourceTree = "<group>"; };
 		F31854112358D65700AC829D /* PickupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickupDetailViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +91,7 @@
 		F31854192358F0E500AC829D /* DonationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationDetailViewController.swift; sourceTree = "<group>"; };
 		F318541B2358F10300AC829D /* AddEditDonationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditDonationViewController.swift; sourceTree = "<group>"; };
 		F318541D2358F12100AC829D /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		F375D97F235970720093572D /* FoodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodController.swift; sourceTree = "<group>"; };
 		F39A4CDA2358F9B900E58609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BusinessDashboard.storyboard; sourceTree = "<group>"; };
 		F39A4CDF2358F9E100E58609 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F39C8EF22358BFEE0025CEE6 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
@@ -110,6 +134,8 @@
 				D6A0C5A62359678C00D9B7E6 /* Views */,
 				E3088C5623581890006F5B9D /* View Controllers */,
 				E3088C5C2358DBCC006F5B9D /* Storyboards */,
+				E39946CB235E5DEB00EA50ED /* Extensions */,
+				E39946CE235F78D700EA50ED /* Fonts */,
 				5744991D2356CFB000147D81 /* AppDelegate.swift */,
 				5744991F2356CFB000147D81 /* SceneDelegate.swift */,
 				5744992B2356CFBE00147D81 /* Info.plist */,
@@ -124,6 +150,7 @@
 				D650F2E3235945C8009FEF4E /* Volunteer.swift */,
 				D650F2E923594F89009FEF4E /* Business.swift */,
 				D650F2E723594B57009FEF4E /* Food.swift */,
+				E3991107235BA68A00FAD057 /* SignUpRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -141,7 +168,10 @@
 		D6A0C5AB2359683100D9B7E6 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3870CDD235B493500C2B807 /* SignUpController.swift */,
+				E3991105235BA40500FAD057 /* APIClient.swift */,
 				D6A0C5AC2359684800D9B7E6 /* LoginController.swift */,
+				F375D97F235970720093572D /* FoodController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -149,10 +179,11 @@
 		E3088C5623581890006F5B9D /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */,
+				E3991109235C03C300FAD057 /* VolunteerSignUpViewController.swift */,
 				F31854132358DDB200AC829D /* BusinessDashBoardTableViewController.swift */,
 				F318541B2358F10300AC829D /* AddEditDonationViewController.swift */,
 				F318541D2358F12100AC829D /* DatePickerViewController.swift */,
-				E3088C622358DC72006F5B9D /* BusinessSignUpViewController.swift */,
 				F31854192358F0E500AC829D /* DonationDetailViewController.swift */,
 				F318540D2358D5D900AC829D /* VolunteerDashboardTableViewController.swift */,
 				F31854112358D65700AC829D /* PickupDetailViewController.swift */,
@@ -168,8 +199,8 @@
 			children = (
 				F39A4CE02358F9E100E58609 /* Main.storyboard */,
 				574499282356CFBE00147D81 /* LaunchScreen.storyboard */,
-				E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */,
 				E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */,
+				E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */,
 				F39C8EF82358C8870025CEE6 /* VolunteerDashboard.storyboard */,
 				F39A4CDB2358F9B900E58609 /* BusinessDashboard.storyboard */,
 				D667E43523581A7D005CBCB3 /* BusinessLogin.storyboard */,
@@ -177,6 +208,27 @@
 				D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E39946CB235E5DEB00EA50ED /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E39946CC235E5DFD00EA50ED /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E39946CE235F78D700EA50ED /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E39946CF235F790000EA50ED /* Roboto-Black.ttf */,
+				E39946D7235F794E00EA50ED /* Roboto-Regular.ttf */,
+				E39946D9235F795900EA50ED /* Roboto-Thin.ttf */,
+				E39946D5235F794500EA50ED /* Roboto-Medium.ttf */,
+				E39946D3235F793700EA50ED /* Roboto-Light.ttf */,
+				E39946D1235F790E00EA50ED /* Roboto-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,14 +289,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E39946DA235F795900EA50ED /* Roboto-Thin.ttf in Resources */,
 				D667E43623581A7D005CBCB3 /* BusinessLogin.storyboard in Resources */,
 				E3088C612358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard in Resources */,
+				E39946D2235F790E00EA50ED /* Roboto-Bold.ttf in Resources */,
 				E399110C235D480C00FAD057 /* Assets.xcassets in Resources */,
 				F39C8EF92358C8870025CEE6 /* VolunteerDashboard.storyboard in Resources */,
 				F39A4CE12358F9EE00E58609 /* Main.storyboard in Resources */,
+				E39946D0235F790000EA50ED /* Roboto-Black.ttf in Resources */,
 				5744992A2356CFBE00147D81 /* LaunchScreen.storyboard in Resources */,
 				D667E43223581A6C005CBCB3 /* VolunteerLogin.storyboard in Resources */,
+				E39946D4235F793700EA50ED /* Roboto-Light.ttf in Resources */,
+				E39946D6235F794500EA50ED /* Roboto-Medium.ttf in Resources */,
 				E3088C592358773D006F5B9D /* BusinessSignUpStoryboard.storyboard in Resources */,
+				E39946D8235F794E00EA50ED /* Roboto-Regular.ttf in Resources */,
 				D667E43423581A74005CBCB3 /* RegisterSelection.storyboard in Resources */,
 				F39A4CD92358F9B900E58609 /* BusinessDashboard.storyboard in Resources */,
 			);
@@ -262,21 +320,28 @@
 				F31854182358EB9100AC829D /* DonationTableViewCell.swift in Sources */,
 				F31854162358EA1700AC829D /* TestCell.swift in Sources */,
 				D6A0C5B3235B717500D9B7E6 /* BusinessLoginViewController.swift in Sources */,
+				E3991106235BA40500FAD057 /* APIClient.swift in Sources */,
 				F318540E2358D5D900AC829D /* VolunteerDashboardTableViewController.swift in Sources */,
 				F31854122358D65700AC829D /* PickupDetailViewController.swift in Sources */,
 				F318541A2358F0E500AC829D /* DonationDetailViewController.swift in Sources */,
 				D6A0C5AD2359684800D9B7E6 /* LoginController.swift in Sources */,
+				D6A0C5AD2359684800D9B7E6 /* LoginController.swift in Sources */,
+				F375D980235970720093572D /* FoodController.swift in Sources */,
 				F31854102358D62C00AC829D /* VolunteerScheduleTableViewController.swift in Sources */,
+				E3870CDE235B493500C2B807 /* SignUpController.swift in Sources */,
 				5744991E2356CFB000147D81 /* AppDelegate.swift in Sources */,
 				E3088C632358DC72006F5B9D /* BusinessSignUpViewController.swift in Sources */,
 				F318541E2358F12100AC829D /* DatePickerViewController.swift in Sources */,
 				574499202356CFB000147D81 /* SceneDelegate.swift in Sources */,
 				D650F2E823594B57009FEF4E /* Food.swift in Sources */,
 				D650F2EA23594F89009FEF4E /* Business.swift in Sources */,
+				E3991108235BA68A00FAD057 /* SignUpRequest.swift in Sources */,
 				D650F2E4235945C8009FEF4E /* Volunteer.swift in Sources */,
+				E39946CD235E5DFD00EA50ED /* Extensions.swift in Sources */,
 				D650F2E6235948DC009FEF4E /* Token.swift in Sources */,
 				F31854142358DDB200AC829D /* BusinessDashBoardTableViewController.swift in Sources */,
 				F318541C2358F10300AC829D /* AddEditDonationViewController.swift in Sources */,
+				E399110A235C03C300FAD057 /* VolunteerSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
