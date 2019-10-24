@@ -64,7 +64,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="eRN-ec-oTm" eventType="touchUpInside" id="Xsp-dr-Tfw"/>
-                                    <segue destination="W01-dn-kWI" kind="show" identifier="VolunteerLoginToDashboard" id="sZy-Mw-UxB"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TP5-45-n6R">
@@ -108,6 +107,7 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Vfx-Y0-avV" id="jdk-t6-S4C"/>
                         <outlet property="usernameTextField" destination="f8K-jV-QZS" id="1zT-On-nSM"/>
+                        <segue destination="W01-dn-kWI" kind="show" identifier="VolunteerLoginToDashboard" id="gIf-vn-10B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9W-eb-Lfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

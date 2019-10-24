@@ -11,10 +11,10 @@ import Foundation
 struct Food: Equatable, Codable {
     var id: Int
     var name: String
-    var pickup_date: Date
+    var pickup_date: String
     var time: String
     var description: String
-    var is_claimed: Bool
+    var is_claimed: Int?
     var business_id: Int
-    var volunteer_id: Int
+    var volunteer_id: Int?
 }

@@ -15,7 +15,7 @@ class VolunteerLoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let loginController = LoginController()
+    var loginController = LoginController.shared
     
     override func viewDidLoad() {
         // hide the navigation bar line
@@ -29,13 +29,15 @@ class VolunteerLoginViewController: UIViewController {
             let password = passwordTextField.text, !password.isEmpty else { return }
         
         loginController.login(type: .volunteer, withUsername: username, withPassword: password) { (error) in
-            if let error = error {
-                NSLog("Error occurred during login: \(error)")
-            }
             
             DispatchQueue.main.async {
-                self.usernameTextField.text = nil
-                self.passwordTextField.text = nil
+                if let error = error {
+                    NSLog("Error occurred during login: \(error)")
+                } else {
+                    self.usernameTextField.text = nil
+                    self.passwordTextField.text = nil
+                    self.performSegue(withIdentifier: "VolunteerLoginToDashboard", sender: self)
+                }
             }
         }
     }

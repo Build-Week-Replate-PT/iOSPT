@@ -9,10 +9,14 @@
 import Foundation
 
 class LoginController {
+    static var shared = LoginController()
+    
     typealias CompletionHandler = (Error?) -> Void
     
     private let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/auth/")!
     var token: TokenResponse?
+    
+    private init() {}
     
     func login(type: UserType, withUsername username: String, withPassword password: String, completion: @escaping CompletionHandler = { _ in }) {
         let requestURL = baseURL.appendingPathComponent("\(type.rawValue)/login")

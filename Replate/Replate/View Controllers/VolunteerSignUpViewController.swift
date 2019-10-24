@@ -96,7 +96,7 @@ class VolunteerSignUpViewController: UIViewController {
         
         // disable the button so the user won't press it more than once
         self.createAccountButton.isEnabled = false
-        signUpController.signUp(type: .business, with: signUpRequest) { (error) in
+        signUpController.signUp(type: .volunteer, with: signUpRequest) { (error) in
             // this needs to be in the main thread because the app would crash if it's running in the bg thread
             DispatchQueue.main.async {
                 if let _ = error {

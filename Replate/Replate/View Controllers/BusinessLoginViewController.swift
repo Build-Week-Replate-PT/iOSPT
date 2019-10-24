@@ -14,7 +14,7 @@ class BusinessLoginViewController: UIViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let loginController = LoginController()
+    let loginController = LoginController.shared
     
     override func viewDidLoad() {
         // hide the navigation bar line

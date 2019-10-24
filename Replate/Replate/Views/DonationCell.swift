@@ -1,5 +1,5 @@
 //
-//  TestCell.swift
+//  DonationCell.swift
 //  Replate
 //
 //  Created by Fabiola S on 10/17/19.
@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-class TestCell {
-    // Just for testing the tableview UI
+class DonationCell {
     var foodImage: UIImage
     var date: String
     var qty: Int

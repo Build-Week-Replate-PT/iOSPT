@@ -14,8 +14,8 @@ class BusinessDashBoardTableViewController: UITableViewController {
     
     var loginController: LoginController?
     
-    var testCells = [
-        TestCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
+    var donationCells = [
+        DonationCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
 ]
 
     override func viewDidLoad() {
@@ -28,12 +28,12 @@ class BusinessDashBoardTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return testCells.count
+        return donationCells.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return testCells.count
+        return donationCells.count
     }
 
    

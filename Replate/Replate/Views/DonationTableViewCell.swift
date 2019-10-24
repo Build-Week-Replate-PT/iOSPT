@@ -10,7 +10,7 @@ import UIKit
 
 class DonationTableViewCell: UITableViewCell {
     
-    var testCell: TestCell? {
+    var donationCell: DonationCell? {
         didSet {
             updateViews()
         }
@@ -30,9 +30,9 @@ class DonationTableViewCell: UITableViewCell {
     }
     
     func updateViews() {
-        guard let qty = testCell?.qty else { return }
-        donationImage.image = testCell?.foodImage
-        dateLabel.text = testCell?.date
+        guard let qty = donationCell?.qty else { return }
+        donationImage.image = donationCell?.foodImage
+        dateLabel.text = donationCell?.date
         qtyLabel.text = String(qty)
         
        
