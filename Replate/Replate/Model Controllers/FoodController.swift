@@ -28,7 +28,7 @@ class FoodController {
         let businessDonationsURL = baseURL.appendingPathComponent("business")
         var request = URLRequest(url: businessDonationsURL)
         request.httpMethod = HTTPMethod.get.rawValue
-        request.setValue("Token \(token.token)", forHTTPHeaderField: "Authorization")
+        request.addValue(token.token, forHTTPHeaderField: "Authorization")
         
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
@@ -103,6 +103,40 @@ class FoodController {
     }
     
     // User can update a saved donation
+//    func updateDonation(with donation: Food, completion: @escaping (Result<Food, NetworkError>) -> Void) {
+//        guard let token = token else {
+//            completion(.failure(.noAuth))
+//            return
+//        }
+//
+//        let updateDonationURL = baseURL.appendingPathComponent("\(donation.id)")
+//        var request = URLRequest(url: updateDonationURL)
+//        request.httpMethod = HTTPMethod.put.rawValue
+//        request.addValue(token.token, forHTTPHeaderField: "Authorization")
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//
+//        do {
+//            let userParams = ["id": donation.id, "message": message] as [String: Any]
+//            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+//            request.httpBody = json
+//        } catch {
+//            print("Error encoding item object: \(error)")
+//        }
+//
+//        URLSession.shared.dataTask(with: request) { (_, response, error) in
+//            if let response = response as? HTTPURLResponse,
+//                response.statusCode == 401 {
+//                completion(.failure(.badAuth))
+//            }
+//
+//            if let _ = error {
+//                completion(.failure(.otherError))
+//                return
+//            }
+//
+//            completion(nil)
+//        }.resume()
+//    }
     
     // User can delete a saved donation
     

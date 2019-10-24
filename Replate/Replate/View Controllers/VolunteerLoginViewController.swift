@@ -29,14 +29,12 @@ class VolunteerLoginViewController: UIViewController {
             let password = passwordTextField.text, !password.isEmpty else { return }
         
         loginController.login(type: .volunteer, withUsername: username, withPassword: password) { (error) in
-            
-            DispatchQueue.main.async {
-                if let error = error {
-                    NSLog("Error occurred during login: \(error)")
-                } else {
+            if let error = error {
+                NSLog("Error occurred during login: \(error)")
+            } else {
+                DispatchQueue.main.async {
                     self.usernameTextField.text = nil
                     self.passwordTextField.text = nil
-                    self.performSegue(withIdentifier: "VolunteerLoginToDashboard", sender: self)
                 }
             }
         }
