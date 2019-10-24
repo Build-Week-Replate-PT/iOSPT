@@ -45,10 +45,9 @@ class VolunteerLoginViewController: UIViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "VolunteerLoginToDashboard" {
-            guard let dashVC = segue.destination as? VolunteerDashboardTableViewController else { return }
-            dashVC.loginController = self.loginController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "VolunteerLoginToDashboard" {
+//
+//        }
+//    }
 }

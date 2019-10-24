@@ -12,27 +12,29 @@ class VolunteerDashboardTableViewController: UITableViewController {
     
     // MARK: - Properties
     
-    var loginController: LoginController?
+    var loginController = LoginController.shared
     var foodController: FoodController = FoodController()
 
     // Test cells to check that UI is working
-    var donationCells = [
-            DonationCell(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
+    var donations = [
+            Donation(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
     ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            self.foodController.fetchAllDonations { (result) in
+        self.foodController.fetchAllDonations { (result) in
+            DispatchQueue.main.async {
                 switch result {
                 case .success(let donations):
-                    print(donations)
+                    self.foodController.donations = donations
+                    self.tableView.reloadData()
                 case .failure(let error):
                     print("Error fetching all donations: \(error)")
                 }
             }
         }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -44,19 +46,20 @@ class VolunteerDashboardTableViewController: UITableViewController {
 
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        // #warning Incomplete implementation, return the number of sections
-//        return foodCells.count
+//        return foodController.donations.count
 //    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return donationCells.count
+        return foodController.donations.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "donationsCell", for: indexPath) as? DonationTableViewCell else { fatalError("Error getting donation data")}
+    
         
-        cell.
+        cell.food = self.foodController.donations[indexPath.row]
         
 
         return cell

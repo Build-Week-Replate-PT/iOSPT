@@ -1,5 +1,5 @@
 //
-//  DonationCell.swift
+//  Donation.swift
 //  Replate
 //
 //  Created by Fabiola S on 10/17/19.
@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DonationCell {
+class Donation {
     var foodImage: UIImage
     var date: String
     var qty: Int

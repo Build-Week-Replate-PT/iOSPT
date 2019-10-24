@@ -10,13 +10,14 @@ import UIKit
 
 class DonationTableViewCell: UITableViewCell {
     
-    var donationCell: DonationCell? {
+    var food: Food? {
         didSet {
             updateViews()
         }
     }
 
     @IBOutlet weak var donationImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var qtyLabel: UILabel!
@@ -25,15 +26,15 @@ class DonationTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func updateViews() {
-        guard let qty = donationCell?.qty else { return }
-        donationImage.image = donationCell?.foodImage
-        dateLabel.text = donationCell?.date
-        qtyLabel.text = String(qty)
+//        guard let qty = donation?.qty else { return }
+        self.donationImage.image = UIImage(named: "pizza") ?? UIImage()
+        self.nameLabel.text = food?.name
+        self.descriptionTextView.text = food?.description
+//        dateLabel.text = donation?.date
+//        qtyLabel.text = String(qty)
         
        
     }

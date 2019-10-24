@@ -16,10 +16,6 @@ class FoodController {
     var loginController = LoginController.shared
     var tokenResponse: TokenResponse? = LoginController.shared.token
     let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/food")!
-
-    init() {
-        self.tokenResponse = loginController.token
-    }
     
     // MARK: Business User functions
     // List all donations created by user
