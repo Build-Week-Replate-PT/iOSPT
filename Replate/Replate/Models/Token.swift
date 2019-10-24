@@ -8,6 +8,7 @@
 
 import Foundation
 
-struct Token: Codable {
+struct TokenResponse: Codable {
+    let user: Volunteer
     let token: String
 }

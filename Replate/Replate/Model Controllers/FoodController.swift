@@ -13,7 +13,7 @@ class FoodController {
     // MARK: Properties
     typealias CompletionHandler = (Result<[String], NetworkError>) -> Void
     var donations: [Food] = []
-    var token: Token?
+    var token = LoginController.token
     let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/food")!
 
     // MARK: Business User functions

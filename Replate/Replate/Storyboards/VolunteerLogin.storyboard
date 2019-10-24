@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2ne-1c-lJp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eRN-ec-oTm">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Replate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RU-8r-ThG">
-                                <rect key="frame" x="102.66666666666667" y="211" width="169.66666666666663" height="58.666666666666686"/>
+                                <rect key="frame" x="102.66666666666667" y="167" width="169.66666666666663" height="58.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ji8-3G-wuZ" userLabel="Text Fields Stack View">
-                                <rect key="frame" x="24" y="333.66666666666669" width="327" height="72"/>
+                                <rect key="frame" x="24" y="289.66666666666669" width="327" height="72"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f8K-jV-QZS">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="34"/>
@@ -54,7 +54,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kab-0B-g2m">
-                                <rect key="frame" x="24" y="464.66666666666669" width="327" height="46"/>
+                                <rect key="frame" x="24" y="420.66666666666669" width="327" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="4rd-1q-fS3"/>
                                 </constraints>
@@ -68,7 +68,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="TP5-45-n6R">
-                                <rect key="frame" x="75.333333333333329" y="529.66666666666663" width="224.66666666666669" height="31"/>
+                                <rect key="frame" x="75.333333333333329" y="485.66666666666669" width="224.66666666666669" height="31.000000000000057"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFk-8H-4c7">
                                         <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="31"/>
@@ -133,24 +133,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yuw-iC-bGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1690" y="214"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="SoG-6r-YdD">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2ne-1c-lJp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eg2-IP-yl5">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="eRN-ec-oTm" kind="relationship" relationship="rootViewController" id="FUR-Rz-Mvx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="blj-En-KXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="103.2" y="158.86699507389164"/>
         </scene>
     </scenes>
     <resources>
