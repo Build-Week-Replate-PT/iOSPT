@@ -31,8 +31,10 @@ class BusinessLoginViewController: UIViewController {
                 NSLog("Error occurred during login: \(error)")
             }
             
-            self.usernameTextField.text = nil
-            self.passwordTextField.text = nil
+            DispatchQueue.main.async {
+                self.usernameTextField.text = nil
+                self.passwordTextField.text = nil
+            }
         }
     }
     
