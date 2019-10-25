@@ -9,13 +9,37 @@
 import UIKit
 
 class DonationDetailViewController: UIViewController {
-
+    
+    // MARK: Properties
+    var foodController = FoodController()
+    var donation: Food?
+    
+    // MARK: Outlets
+    @IBOutlet weak var businessNameLabel: UILabel!
+    @IBOutlet weak var businessAddressLabel: UILabel!
+    @IBOutlet weak var pickupDateLabel: UILabel!
+    @IBOutlet weak var donationDescriptionTextView: UITextView!
+    @IBOutlet weak var businessPhoneLabel: UILabel!
+    @IBOutlet weak var pickupTimeLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        updateViews()
     }
     
+    func updateViews() {
+        guard let donation = donation else {
+            title = "New Donation"
+            return
+        }
+        
+        // Missing getting Logged in user's information
+        pickupDateLabel.text = donation.pickup_date
+        donationDescriptionTextView.text = donation.description
+        pickupTimeLabel.text = donation.time
+        
+    }
 
     /*
     // MARK: - Navigation
