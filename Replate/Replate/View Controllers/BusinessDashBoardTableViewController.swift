@@ -37,13 +37,14 @@ class BusinessDashBoardTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-         super.viewDidAppear(animated)
-               
-        foodController.fetchBusinessDonations { (result) in
-            if let createdDonations = try? result.get() {
-                DispatchQueue.main.async {
-                    self.foodController.donations = createdDonations
-                    self.tableView.reloadData()
+        super.viewDidAppear(animated)
+        if loginController.token?.token != nil {
+            foodController.fetchBusinessDonations { (result) in
+                if let createdDonations = try? result.get() {
+                    DispatchQueue.main.async {
+                        self.foodController.donations = createdDonations
+                        self.tableView.reloadData()
+                    }
                 }
             }
         }
