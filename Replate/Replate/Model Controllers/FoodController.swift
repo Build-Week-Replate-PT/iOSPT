@@ -18,7 +18,7 @@ class FoodController {
     
     // MARK: Business User functions
     // List all donations created by user
-    func fetchBusinessDonations(completion: @escaping CompletionHandler) {
+    func fetchBusinessDonations(completion: @escaping (Result<[Food], NetworkError>) -> Void) {
         let businessDonationsURL = baseURL.appendingPathComponent("business")
         var request = URLRequest(url: businessDonationsURL)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -44,7 +44,7 @@ class FoodController {
             let decoder = JSONDecoder()
             
             do {
-                let donations = try decoder.decode([String].self, from: data)
+                let donations = try decoder.decode([Food].self, from: data)
                 completion(.success(donations))
             } catch {
                 print("Error decoding business donations: \(error)")
@@ -55,39 +55,51 @@ class FoodController {
     }
     
     // User can create a new donation
-    func createDonation(with donation: Food, completion: @escaping (Result<Food, NetworkError>) -> Void) {
+    func createDonation(withName name: String, withPickupDate pickupDate: String, withTime time: String, withDescription description: String, completion: @escaping (Result<Food, NetworkError>) -> Void) {
         var request = URLRequest(url: baseURL)
         request.httpMethod = HTTPMethod.post.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue(LoginController.shared.token!.token, forHTTPHeaderField: "Authorization")
-        
+
         let jsonEncoder = JSONEncoder()
         jsonEncoder.dateEncodingStrategy = .iso8601
         do {
-            
-            let jsonData = try jsonEncoder.encode(donation)
-            request.httpBody = jsonData
-            print(donation)
+            let userParams = ["name": name, "time": time, "description": description, "is_claimed": 0, "pickup_date": pickupDate] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
         } catch {
             print("Error encoding gig object: \(error.localizedDescription)")
             completion(.failure(.otherError))
             return
         }
-        
-        URLSession.shared.dataTask(with: request) { (_, response, error) in
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
                 response.statusCode == 401 {
                 completion(.failure(.badAuth))
             }
-            
+
             if let _ = error {
                 completion(.failure(.otherError))
                 return
             }
             
-            self.donations.append(donation)
-            completion(.success(donation))
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
             
+            let decoder = JSONDecoder()
+            
+            do {
+                let donation = try decoder.decode(Food.self, from: data)
+                self.donations.append(donation)
+                completion(.success(donation))
+            } catch {
+                print("Error decoding donation after creating: \(error)")
+                completion(.failure(.noDecode))
+                return
+            }
         }.resume()
     }
     
@@ -128,7 +140,27 @@ class FoodController {
 //    }
     
     // User can delete a saved donation
-    
+    func deleteDonation(with donation: Food, completion: @escaping (Result<[Food], NetworkError>) -> Void) {
+        let requestURL = baseURL.appendingPathComponent("\(donation.id)")
+
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.delete.rawValue
+        request.addValue(LoginController.shared.token!.token, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+        }.resume()
+    }
     
     // MARK: Volunteer user functions
     
@@ -208,5 +240,34 @@ class FoodController {
     }
     
     // User can claim a donation
-    
+    func updateClaim(with donation: Food, completion: @escaping (Result<Food, NetworkError>) -> Void) {
+        let updateDonationURL = baseURL.appendingPathComponent("claim/\(donation.id)")
+        var request = URLRequest(url: updateDonationURL)
+        request.httpMethod = HTTPMethod.put.rawValue
+        request.addValue(LoginController.shared.token!.token, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            let userParams = ["is_claimed": (donation.is_claimed == 1) ? 0 : 1] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("Error encoding item object: \(error)")
+        }
+
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+
+            completion(.success(donation))
+        }.resume()
+    }
 }
