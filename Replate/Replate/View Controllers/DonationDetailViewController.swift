@@ -9,10 +9,6 @@
 import UIKit
 
 class DonationDetailViewController: UIViewController {
-    
-    // MARK: Properties
-    var foodController = FoodController()
-    var donation: Food?
 
     override func viewDidLoad() {
         super.viewDidLoad()

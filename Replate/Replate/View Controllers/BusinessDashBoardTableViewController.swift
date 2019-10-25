@@ -70,13 +70,17 @@ class BusinessDashBoardTableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-              if segue.identifier == "" {
+              if segue.identifier == "donationDetailSegue" {
                   if let detailVC = segue.destination as? DonationDetailViewController {
                       guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
                       detailVC.foodController = foodController
                     detailVC.donation = foodController.donations[selectedIndexPath.row]
                   }
-              }
+              } else if segue.identifier == "createDonationSegue" {
+                if let addVC = segue.destination as? AddEditDonationViewController {
+                    addVC.foodController = foodController
+                }
+        }
     }
 
 }
