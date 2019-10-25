@@ -13,6 +13,7 @@ class DonationDetailViewController: UIViewController {
     // MARK: Properties
     var foodController = FoodController()
     var donation: Food?
+    var business: Business?
     
     // MARK: Outlets
     @IBOutlet weak var businessNameLabel: UILabel!
@@ -29,9 +30,16 @@ class DonationDetailViewController: UIViewController {
     }
     
     func updateViews() {
-        guard let donation = donation else {
+        guard let donation = donation,
+            let business = business else {
             title = "New Donation"
             return
+        }
+        
+        if donation.business_id == business.id {
+            businessNameLabel.text = business.organization_name
+            businessAddressLabel.text = business.address
+            businessPhoneLabel.text = business.phone
         }
         
         // Missing getting Logged in user's information
