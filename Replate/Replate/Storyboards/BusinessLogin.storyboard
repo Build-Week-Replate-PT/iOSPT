@@ -64,7 +64,6 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="TDn-NP-QS3" eventType="touchUpInside" id="Ma8-ok-sCs"/>
-                                    <segue destination="rOi-7S-eA4" kind="show" identifier="BusinessLoginToDashboard" id="LBc-5k-eOi"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mRR-pd-BPx">
@@ -83,7 +82,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="YTn-ag-NOv" kind="show" id="A7b-9G-smi"/>
+                                            <action selector="backToSignUp:" destination="TDn-NP-QS3" eventType="touchUpInside" id="E4q-jP-tkv"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -112,27 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JsR-xD-ON1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5999999999999" y="158.86699507389164"/>
-        </scene>
-        <!--BusinessDashboard-->
-        <scene sceneID="MD1-K2-8Wy">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BusinessDashboard" id="rOi-7S-eA4" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="rec-q9-AUE"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6HH-18-A1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1657" y="96"/>
-        </scene>
-        <!--BusinessSignUpStoryboard-->
-        <scene sceneID="NS8-Ei-KyI">
-            <objects>
-                <viewControllerPlaceholder storyboardName="BusinessSignUpStoryboard" id="YTn-ag-NOv" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="lHu-27-UZn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HbH-Nr-6s5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1683" y="214"/>
+            <point key="canvasLocation" x="1988" y="158.86699507389164"/>
         </scene>
     </scenes>
     <resources>

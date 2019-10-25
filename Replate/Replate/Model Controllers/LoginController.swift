@@ -29,7 +29,6 @@ class LoginController {
             let userParams = ["username": username, "password": password] as [String: Any]
             let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
             request.httpBody = json
-            print(request)
         } catch {
             print("Error encoding user object: \(error)")
         }

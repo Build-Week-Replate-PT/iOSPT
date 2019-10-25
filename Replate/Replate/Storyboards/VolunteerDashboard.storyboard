@@ -7,6 +7,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--VolunteerSignUpStoryboard-->
+        <scene sceneID="Lef-PW-oNf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VolunteerSignUpStoryboard" id="G9f-Hu-jf3" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NWg-0d-8Zn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2203" y="459"/>
+        </scene>
         <!--Title-->
         <scene sceneID="Rth-0i-NWU">
             <objects>
@@ -117,10 +125,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Title" id="hOk-3y-nIn"/>
+                    <connections>
+                        <segue destination="G9f-Hu-jf3" kind="presentation" identifier="signUpVolunteer" modalPresentationStyle="fullScreen" id="e5n-gI-IVo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APH-nN-hgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1294.2028985507247" y="60.9375"/>
+            <point key="canvasLocation" x="2204.3478260869565" y="60.9375"/>
         </scene>
         <!--Pickup Detail View Controller-->
         <scene sceneID="oHf-u6-St5">
@@ -270,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9n-kg-8YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2430.434782608696" y="479.46428571428567"/>
+            <point key="canvasLocation" x="3340.579710144928" y="479.46428571428567"/>
         </scene>
         <!--Scheduled Pickups-->
         <scene sceneID="Iaw-VX-g4x">
@@ -347,7 +358,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4Y-Es-COM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2431.8840579710145" y="-220.3125"/>
+            <point key="canvasLocation" x="3340.579710144928" y="-220.3125"/>
         </scene>
     </scenes>
     <resources>

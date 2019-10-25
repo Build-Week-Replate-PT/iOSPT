@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qwo-pR-sz0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZTZ-RB-4P0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -98,7 +98,7 @@
                                                             <color key="titleColor" red="0.050980392159999999" green="0.1764705882" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="fd0-wu-0Bx" kind="show" id="tnZ-ae-83p"/>
+                                                            <segue destination="fd0-wu-0Bx" kind="show" identifier="ToBusinessLogin" id="tnZ-ae-83p"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Se-2J-W7J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1079.7101449275362" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1989.8550724637682" y="116.51785714285714"/>
         </scene>
         <!--Login-->
         <scene sceneID="dTg-eh-gxD">
@@ -144,18 +144,18 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yb-5K-AYs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1082" y="544"/>
+            <point key="canvasLocation" x="1991" y="512"/>
         </scene>
         <!--Business Sign Up View Controller-->
         <scene sceneID="xSM-Uy-Vzf">
             <objects>
                 <viewController id="S6V-j7-Dcp" customClass="BusinessSignUpViewController" customModule="Replate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="brI-fa-yOa">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="71W-h4-zDI" userLabel="Main Stack View">
-                                <rect key="frame" x="16" y="274" width="382" height="294"/>
+                                <rect key="frame" x="16" y="301" width="382" height="294"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A few more details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Da-ep-fsp">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="20"/>
@@ -226,22 +226,29 @@
                         <outlet property="cityStateZipcodeTextField" destination="Xta-kB-2fM" id="Wk2-u8-QWd"/>
                         <outlet property="createAccountButton" destination="4V7-0m-eBk" id="0X3-1G-YjT"/>
                         <outlet property="phoneNumberTextField" destination="Sf9-vJ-SxR" id="t7c-XG-tH2"/>
-                        <segue destination="phy-Z8-WmW" kind="show" identifier="BusinessDashboardSegue" id="Eyv-il-ohw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yyk-0G-yVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1942.0289855072465" y="116.51785714285714"/>
+            <point key="canvasLocation" x="2852.1739130434785" y="116.51785714285714"/>
         </scene>
-        <!--BusinessLogin-->
-        <scene sceneID="v6U-aK-VOE">
+        <!--Navigation Controller-->
+        <scene sceneID="Fbi-Xq-6eP">
             <objects>
-                <viewControllerPlaceholder storyboardName="BusinessLogin" id="phy-Z8-WmW" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="aJA-Lc-9uJ"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NRA-U1-oHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoP-uU-IqG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZTZ-RB-4P0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A8k-m8-kSm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qwo-pR-sz0" kind="relationship" relationship="rootViewController" id="c74-Li-ueO"/>
+                    </connections>
+                </navigationController>
             </objects>
-            <point key="canvasLocation" x="2645" y="117"/>
+            <point key="canvasLocation" x="1079.7101449275362" y="116.51785714285714"/>
         </scene>
     </scenes>
 </document>

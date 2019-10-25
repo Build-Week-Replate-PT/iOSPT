@@ -15,6 +15,7 @@ class BusinessLoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     let loginController = LoginController.shared
+    var foodController: FoodController?
     
     override func viewDidLoad() {
         // hide the navigation bar line
@@ -29,13 +30,16 @@ class BusinessLoginViewController: UIViewController {
         loginController.login(type: .business, withUsername: username, withPassword: password) { (error) in
             if let error = error {
                 NSLog("Error occurred during login: \(error)")
-            }
-            
-            DispatchQueue.main.async {
-                self.usernameTextField.text = nil
-                self.passwordTextField.text = nil
+            } else {
+                DispatchQueue.main.async {
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         }
+    }
+    
+    @IBAction func backToSignUp(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Navigation

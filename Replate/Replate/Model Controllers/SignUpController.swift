@@ -13,10 +13,7 @@ class SignUpController {
     typealias CompletionHandler = (Error?) -> Void
     
     private let baseURL = URL(string: "https://bw-replate.herokuapp.com/api/auth")!
-    
-    // storing the objects from API
-    var token: TokenResponse?
-    
+        
     // create function for sign up
     func signUp(type: UserType, with signupData: SignUpRequest, completion: @escaping CompletionHandler) {
         let signUpURL = baseURL.appendingPathComponent("/\(type.rawValue)/register")
@@ -54,7 +51,7 @@ class SignUpController {
             
             let decoder = JSONDecoder()
             do {
-                self.token = try decoder.decode(TokenResponse.self, from: data)
+                LoginController.shared.token = try decoder.decode(TokenResponse.self, from: data)
             } catch {
                 print("Error decoding token object: \(error)")
                 completion(error)

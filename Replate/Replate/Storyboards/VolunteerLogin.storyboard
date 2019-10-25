@@ -82,7 +82,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="PDB-H4-gtp" kind="show" id="qBY-zC-HaM"/>
+                                            <action selector="backToSignUp:" destination="eRN-ec-oTm" eventType="touchUpInside" id="pY2-Uc-O3i"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -107,32 +107,11 @@
                     <connections>
                         <outlet property="passwordTextField" destination="Vfx-Y0-avV" id="jdk-t6-S4C"/>
                         <outlet property="usernameTextField" destination="f8K-jV-QZS" id="1zT-On-nSM"/>
-                        <segue destination="W01-dn-kWI" kind="show" identifier="VolunteerLoginToDashboard" id="gIf-vn-10B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f9W-eb-Lfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1045.5999999999999" y="158.86699507389164"/>
-        </scene>
-        <!--VolunteerDashboard-->
-        <scene sceneID="aFf-s0-PBc">
-            <objects>
-                <viewControllerPlaceholder storyboardName="VolunteerDashboard" id="W01-dn-kWI" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KhV-Ru-nIW"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c9X-f7-8T5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1654" y="102"/>
-        </scene>
-        <!--VolunteerSignUpStoryboard-->
-        <scene sceneID="veZ-h6-sB3">
-            <objects>
-                <viewControllerPlaceholder storyboardName="VolunteerSignUpStoryboard" id="PDB-H4-gtp" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="kaq-bt-JJ8"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yuw-iC-bGg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1690" y="214"/>
+            <point key="canvasLocation" x="1988" y="158.86699507389164"/>
         </scene>
     </scenes>
     <resources>

@@ -107,8 +107,8 @@ class VolunteerSignUpViewController: UIViewController {
                     self.createAccountButton.isEnabled = true
                     return
                 } else {
-                    // navigate to the business dashboard
-                    self.performSegue(withIdentifier: "VolunteerDashboardSegue", sender: self)
+                    // navigate to the volunteer dashboard
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }

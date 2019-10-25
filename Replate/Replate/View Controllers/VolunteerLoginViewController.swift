@@ -17,11 +17,6 @@ class VolunteerLoginViewController: UIViewController {
     
     var loginController = LoginController.shared
     
-    override func viewDidLoad() {
-        // hide the navigation bar line
-        self.navigationController?.navigationBar.shouldRemoveShadow(true)
-    }
-    
     // MARK: - Actions and Methods
     
     @IBAction func login(_ sender: UIButton) {
@@ -33,11 +28,14 @@ class VolunteerLoginViewController: UIViewController {
                 NSLog("Error occurred during login: \(error)")
             } else {
                 DispatchQueue.main.async {
-                    self.usernameTextField.text = nil
-                    self.passwordTextField.text = nil
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
+    }
+    
+    @IBAction func backToSignUp(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Navigation

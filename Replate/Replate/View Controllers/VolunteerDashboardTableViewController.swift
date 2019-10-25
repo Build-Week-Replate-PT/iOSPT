@@ -23,23 +23,30 @@ class VolunteerDashboardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.foodController.fetchAllDonations { (result) in
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let donations):
-                    self.foodController.donations = donations
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    print("Error fetching all donations: \(error)")
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        self.navigationItem.leftBarButtonItem = nil
+        
+        if loginController.token == nil {
+            performSegue(withIdentifier: "signUpVolunteer", sender: self)
+        }
+    }
+        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if loginController.token?.token != nil {
+            self.foodController.fetchAllDonations { (result) in
+                DispatchQueue.main.async {
+                    switch result {
+                    case .success(let donations):
+                        self.foodController.donations = donations
+                        self.tableView.reloadData()
+                    case .failure(let error):
+                        print("Error fetching all donations: \(error)")
+                    }
                 }
             }
         }
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source

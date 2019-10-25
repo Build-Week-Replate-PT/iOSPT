@@ -16,12 +16,23 @@ class BusinessDashBoardTableViewController: UITableViewController {
     
     var donations = [
         Donation(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
-]
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.leftBarButtonItem = nil
+        
+        if loginController.token == nil {
+            performSegue(withIdentifier: "signUpBusiness", sender: self)
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -81,14 +92,13 @@ class BusinessDashBoardTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//        if segue.identifier == "signUpBusiness" {
+//            guard let signupVC = segue.destination as? BusinessSignUpViewController else { return }
+//            signupVC.foodController = self.bucketListClient
+//        }
     }
-    */
-
 }

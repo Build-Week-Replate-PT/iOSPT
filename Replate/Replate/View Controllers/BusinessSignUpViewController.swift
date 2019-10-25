@@ -28,6 +28,7 @@ class BusinessSignUpViewController: UIViewController {
     }
     
     var firstForm: FirstForm?
+    var foodController: FoodController?
     // we should consolidate the controller at the end
     private let signUpController: SignUpController = SignUpController()
     
@@ -109,7 +110,7 @@ class BusinessSignUpViewController: UIViewController {
                     return
                 } else {
                     // navigate to the business dashboard
-                    self.performSegue(withIdentifier: "BusinessDashboardSegue", sender: self)
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
         }
@@ -122,6 +123,8 @@ class BusinessSignUpViewController: UIViewController {
         if segue.identifier == "SecondFormSegue" {
             guard let vc = segue.destination as? BusinessSignUpViewController else { return }
             vc.firstForm = self.firstForm
+        } else if segue.identifier == "ToBusinessLogin" {
+            //
         }
     }
 }
