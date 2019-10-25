@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wkS-Qj-BSg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wkS-Qj-BSg">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--Business Dash Board Table View Controller-->
         <scene sceneID="Rth-0i-NWU">
             <objects>
                 <tableViewController id="3T4-Id-qCN" customClass="BusinessDashBoardTableViewController" customModule="Replate" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,13 @@
                             <outlet property="delegate" destination="3T4-Id-qCN" id="vSU-Kd-8TA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="woB-CI-13L"/>
+                    <navigationItem key="navigationItem" id="woB-CI-13L">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8G4-Fh-dNP">
+                            <connections>
+                                <segue destination="3RO-Cs-66l" kind="show" identifier="createDonationSegue" id="rSQ-zE-lFb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="APH-nN-hgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,10 +546,13 @@
     </scenes>
     <resources>
         <image name="addImageIcon" width="59" height="59"/>
-        <image name="chevron.left.circle" catalog="system" width="64" height="60"/>
-        <image name="chevron.left.circle.fill" catalog="system" width="64" height="60"/>
-        <image name="greaterthan.circle" catalog="system" width="64" height="60"/>
+        <image name="chevron.left.circle" catalog="system" width="64" height="62"/>
+        <image name="chevron.left.circle.fill" catalog="system" width="64" height="62"/>
+        <image name="greaterthan.circle" catalog="system" width="64" height="62"/>
         <image name="imagePlaceholder" width="375" height="250"/>
         <image name="pizza" width="750" height="421"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="rSQ-zE-lFb"/>
+    </inferredMetricsTieBreakers>
 </document>

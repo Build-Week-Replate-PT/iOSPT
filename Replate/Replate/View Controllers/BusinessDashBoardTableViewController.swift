@@ -69,14 +69,14 @@ class BusinessDashBoardTableViewController: UITableViewController {
     }
 
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "signUpBusiness" {
-//            guard let signupVC = segue.destination as? BusinessSignUpViewController else { return }
-//            signupVC.foodController = self.bucketListClient
-//        }
+              if segue.identifier == "" {
+                  if let detailVC = segue.destination as? DonationDetailViewController {
+                      guard let selectedIndexPath = tableView.indexPathForSelectedRow else { return }
+                      detailVC.foodController = foodController
+                    detailVC.donation = foodController.donations[selectedIndexPath.row]
+                  }
+              }
     }
- */
+
 }
