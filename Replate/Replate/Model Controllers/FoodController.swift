@@ -73,7 +73,7 @@ class FoodController {
             return
         }
 
-        URLSession.shared.dataTask(with: request) { (_, response, error) in
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse,
                 response.statusCode == 401 {
                 completion(.failure(.badAuth))
@@ -81,6 +81,23 @@ class FoodController {
 
             if let _ = error {
                 completion(.failure(.otherError))
+                return
+            }
+            
+            guard let data = data else {
+                completion(.failure(.badData))
+                return
+            }
+            
+            let decoder = JSONDecoder()
+            
+            do {
+                let donation = try decoder.decode(Food.self, from: data)
+                self.donations.append(donation)
+                completion(.success(donation))
+            } catch {
+                print("Error decoding donation after creating: \(error)")
+                completion(.failure(.noDecode))
                 return
             }
         }.resume()
