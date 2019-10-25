@@ -73,6 +73,9 @@
                                                                     <integer key="value" value="8"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="claimPressed:" destination="gc3-vC-tIw" eventType="touchUpInside" id="HCN-zF-MBz"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -111,6 +114,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="claimButton" destination="vp5-mP-DEj" id="yyC-jB-Z4k"/>
                                     <outlet property="descriptionTextView" destination="P4v-cb-eWn" id="iss-kb-YTE"/>
                                     <outlet property="donationImage" destination="Eif-zc-Hdp" id="tLR-wG-ETR"/>
                                     <outlet property="nameLabel" destination="RJy-hs-UeL" id="BYe-0h-K53"/>
