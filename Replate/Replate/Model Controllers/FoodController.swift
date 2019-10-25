@@ -128,7 +128,27 @@ class FoodController {
 //    }
     
     // User can delete a saved donation
-    
+    func deleteDonation(with donation: Food, completion: @escaping (Result<[Food], NetworkError>) -> Void) {
+        let requestURL = baseURL.appendingPathComponent("\(donation.id)")
+
+        var request = URLRequest(url: requestURL)
+        request.httpMethod = HTTPMethod.delete.rawValue
+        request.addValue(LoginController.shared.token!.token, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+            
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+        }.resume()
+    }
     
     // MARK: Volunteer user functions
     
