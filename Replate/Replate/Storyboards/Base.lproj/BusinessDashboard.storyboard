@@ -147,16 +147,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="138" translatesAutoresizingMaskIntoConstraints="NO" id="hxd-2I-jok">
-                                <rect key="frame" x="20" y="311" width="366" height="30"/>
+                                <rect key="frame" x="20" y="311" width="366" height="42"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lou Malnati's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="co7-03-4O4">
-                                        <rect key="frame" x="0.0" y="0.0" width="198" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                         <color key="textColor" red="0.1803921568627451" green="0.1764705882352941" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7e-Z0-17s">
-                                        <rect key="frame" x="336" y="0.0" width="30" height="30"/>
+                                        <rect key="frame" x="336" y="0.0" width="30" height="42"/>
                                         <state key="normal" title="Edit">
                                             <color key="titleColor" red="0.42745098040000001" green="0.44705882349999998" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -167,7 +167,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="wUC-KU-G6b">
-                                <rect key="frame" x="20" y="349" width="374" height="360"/>
+                                <rect key="frame" x="20" y="361" width="374" height="348"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick up Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZo-ni-Wnw">
                                         <rect key="frame" x="0.0" y="0.0" width="113" height="18"/>
@@ -206,32 +206,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Large deep dish pizzas. To be donated to Greater Chicago Food Depository." translatesAutoresizingMaskIntoConstraints="NO" id="yXL-W4-h4L">
-                                        <rect key="frame" x="0.0" y="162" width="374" height="90"/>
+                                        <rect key="frame" x="0.0" y="162" width="374" height="132"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="textColor" red="0.18039215689999999" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knh-eY-Nhk">
-                                        <rect key="frame" x="0.0" y="261" width="58.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.42745098040000001" green="0.44705882349999998" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TE-lA-BBq">
-                                        <rect key="frame" x="0.0" y="288" width="9.5" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.18039215689999999" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fp-eU-43E">
-                                        <rect key="frame" x="0.0" y="315" width="111.5" height="18"/>
+                                        <rect key="frame" x="0.0" y="303" width="111.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.42745098040000001" green="0.44705882349999998" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(123) 456-7890" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVg-kq-D65">
-                                        <rect key="frame" x="0.0" y="342" width="110.5" height="18"/>
+                                        <rect key="frame" x="0.0" y="330" width="110.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" red="0.18039215689999999" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -256,6 +244,14 @@
                     <navigationItem key="navigationItem" id="w6U-s8-GLF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="PbA-VN-lXO"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="businessAddressLabel" destination="EYj-dF-mUG" id="fdb-Lb-kJo"/>
+                        <outlet property="businessNameLabel" destination="co7-03-4O4" id="qOq-5M-jud"/>
+                        <outlet property="businessPhoneLabel" destination="EVg-kq-D65" id="pss-uX-xJ4"/>
+                        <outlet property="donationDescriptionTextView" destination="yXL-W4-h4L" id="RqM-ge-y09"/>
+                        <outlet property="pickupDateLabel" destination="W5B-rm-0JK" id="aWq-vG-Dvi"/>
+                        <outlet property="pickupTimeLabel" destination="0jd-cH-GKh" id="3CH-Nm-IIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9n-kg-8YP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

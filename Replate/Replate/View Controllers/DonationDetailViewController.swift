@@ -9,7 +9,20 @@
 import UIKit
 
 class DonationDetailViewController: UIViewController {
-
+    
+    // MARK: Properties
+    var foodController = FoodController()
+    var donation: Food?
+    
+    // MARK: Outlets
+    @IBOutlet weak var businessNameLabel: UILabel!
+    @IBOutlet weak var businessAddressLabel: UILabel!
+    @IBOutlet weak var pickupDateLabel: UILabel!
+    @IBOutlet weak var pickupTimeLabel: UILabel!
+    @IBOutlet weak var donationDescriptionTextView: UITextView!
+    @IBOutlet weak var businessPhoneLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
