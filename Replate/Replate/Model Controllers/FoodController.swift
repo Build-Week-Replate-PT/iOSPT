@@ -18,7 +18,7 @@ class FoodController {
     
     // MARK: Business User functions
     // List all donations created by user
-    func fetchBusinessDonations(completion: @escaping CompletionHandler) {
+    func fetchBusinessDonations(completion: @escaping (Result<[Food], NetworkError>) -> Void) {
         let businessDonationsURL = baseURL.appendingPathComponent("business")
         var request = URLRequest(url: businessDonationsURL)
         request.httpMethod = HTTPMethod.get.rawValue
@@ -44,7 +44,7 @@ class FoodController {
             let decoder = JSONDecoder()
             
             do {
-                let donations = try decoder.decode([String].self, from: data)
+                let donations = try decoder.decode([Food].self, from: data)
                 completion(.success(donations))
             } catch {
                 print("Error decoding business donations: \(error)")
