@@ -240,5 +240,34 @@ class FoodController {
     }
     
     // User can claim a donation
-    
+    func updateClaim(with donation: Food, completion: @escaping (Result<Food, NetworkError>) -> Void) {
+        let updateDonationURL = baseURL.appendingPathComponent("claim/\(donation.id)")
+        var request = URLRequest(url: updateDonationURL)
+        request.httpMethod = HTTPMethod.put.rawValue
+        request.addValue(LoginController.shared.token!.token, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        do {
+            let userParams = ["is_claimed": (donation.is_claimed == 1) ? 0 : 1] as [String: Any]
+            let json = try JSONSerialization.data(withJSONObject: userParams, options: .prettyPrinted)
+            request.httpBody = json
+        } catch {
+            print("Error encoding item object: \(error)")
+        }
+
+        URLSession.shared.dataTask(with: request) { (_, response, error) in
+            if let response = response as? HTTPURLResponse,
+                response.statusCode == 401 {
+                completion(.failure(.badAuth))
+                return
+            }
+
+            if let _ = error {
+                completion(.failure(.otherError))
+                return
+            }
+
+            completion(.success(donation))
+        }.resume()
+    }
 }
