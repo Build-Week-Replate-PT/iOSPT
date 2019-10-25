@@ -23,6 +23,7 @@ class BusinessDashBoardTableViewController: UITableViewController {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.leftBarButtonItem = nil
+        self.loginController.delegate = self
         
         if loginController.token == nil {
             performSegue(withIdentifier: "signUpBusiness", sender: self)
@@ -100,5 +101,14 @@ class BusinessDashBoardTableViewController: UITableViewController {
 //            guard let signupVC = segue.destination as? BusinessSignUpViewController else { return }
 //            signupVC.foodController = self.bucketListClient
 //        }
+    }
+}
+
+
+extension BusinessDashBoardTableViewController: LoginControllerDelegate {
+    func didLogin() {
+        DispatchQueue.main.async {
+            self.navigationController?.setViewControllers([self], animated: false)
+        }
     }
 }

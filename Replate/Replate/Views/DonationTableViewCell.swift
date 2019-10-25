@@ -8,13 +8,22 @@
 
 import UIKit
 
+protocol DonationTableViewCellDelegate: AnyObject {
+    func claimButtonPressed(is_claimed: Bool)
+}
+
 class DonationTableViewCell: UITableViewCell {
     
     var food: Food? {
         didSet {
+            self.isClaimedLocal = food?.is_claimed == 1
             updateViews()
         }
     }
+    
+    var isClaimedLocal: Bool  = false
+    
+    weak var delegate: DonationTableViewCellDelegate?
 
     @IBOutlet weak var donationImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,7 +31,7 @@ class DonationTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var qtyLabel: UILabel!
     @IBOutlet weak var hasBeenAcceptedLabel: UILabel!
-    
+    @IBOutlet weak var claimButton: UIButton!
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -36,7 +45,16 @@ class DonationTableViewCell: UITableViewCell {
 //        dateLabel.text = donation?.date
 //        qtyLabel.text = String(qty)
         
-       
+        if self.isClaimedLocal {
+            self.claimButton.setTitle("Claimed", for: .normal)
+        } else {
+            self.claimButton.setTitle("Accept", for: .normal)
+        }
     }
 
+    @IBAction func claimPressed(_ sender: Any) {
+        self.isClaimedLocal.toggle()
+        updateViews()
+        self.delegate?.claimButtonPressed(is_claimed: self.isClaimedLocal)
+    }
 }

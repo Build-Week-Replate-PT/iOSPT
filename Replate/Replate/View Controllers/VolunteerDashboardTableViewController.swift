@@ -25,6 +25,7 @@ class VolunteerDashboardTableViewController: UITableViewController {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         self.navigationItem.leftBarButtonItem = nil
+        self.loginController.delegate = self
         
         if loginController.token == nil {
             performSegue(withIdentifier: "signUpVolunteer", sender: self)
@@ -65,9 +66,8 @@ class VolunteerDashboardTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "donationsCell", for: indexPath) as? DonationTableViewCell else { fatalError("Error getting donation data")}
     
-        
         cell.food = self.foodController.donations[indexPath.row]
-        
+        cell.delegate = self
 
         return cell
     }
@@ -121,4 +121,18 @@ class VolunteerDashboardTableViewController: UITableViewController {
     }
     */
 
+}
+
+extension VolunteerDashboardTableViewController: DonationTableViewCellDelegate {
+    func claimButtonPressed(is_claimed: Bool) {
+        // wait from Michael for the networking code
+    }
+}
+
+extension VolunteerDashboardTableViewController: LoginControllerDelegate {
+    func didLogin() {
+        DispatchQueue.main.async {
+            self.navigationController?.setViewControllers([self], animated: false)
+        }
+    }
 }

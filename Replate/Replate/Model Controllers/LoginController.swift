@@ -8,8 +8,13 @@
 
 import Foundation
 
+protocol LoginControllerDelegate: AnyObject {
+    func didLogin()
+}
+
 class LoginController {
     static var shared = LoginController()
+    weak var delegate: LoginControllerDelegate?
     
     typealias CompletionHandler = (Error?) -> Void
     
@@ -53,6 +58,7 @@ class LoginController {
                 return
             }
             completion(nil)
+            self.delegate?.didLogin()
         }.resume()
     }
 }
