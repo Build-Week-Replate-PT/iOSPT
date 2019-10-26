@@ -15,11 +15,6 @@ class VolunteerDashboardTableViewController: UITableViewController {
     var loginController = LoginController.shared
     var foodController: FoodController = FoodController()
 
-    // Test cells to check that UI is working
-    var donations = [
-            Donation(foodImage: UIImage(named: "pizza") ?? UIImage(), date: "Thursday, October 17", qty: 2, wasAccepted: true)
-    ]
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -124,8 +119,17 @@ class VolunteerDashboardTableViewController: UITableViewController {
 }
 
 extension VolunteerDashboardTableViewController: DonationTableViewCellDelegate {
-    func claimButtonPressed(is_claimed: Bool) {
-        // wait from Michael for the networking code
+    func claimButtonPressed(food: Food) {
+        self.foodController.updateClaim(with: food) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(_):
+                    break
+                case .failure(let error):
+                    print("Error updating the donation: \(error)")
+                }
+            }
+        }
     }
 }
 

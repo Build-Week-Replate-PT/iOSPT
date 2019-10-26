@@ -9,7 +9,7 @@
 import UIKit
 
 protocol DonationTableViewCellDelegate: AnyObject {
-    func claimButtonPressed(is_claimed: Bool)
+    func claimButtonPressed(food: Food)
 }
 
 class DonationTableViewCell: UITableViewCell {
@@ -38,23 +38,24 @@ class DonationTableViewCell: UITableViewCell {
     }
     
     func updateViews() {
-//        guard let qty = donation?.qty else { return }
         self.donationImage.image = UIImage(named: "pizza") ?? UIImage()
         self.nameLabel.text = food?.name
         self.descriptionTextView.text = food?.description
-//        dateLabel.text = donation?.date
-//        qtyLabel.text = String(qty)
         
         if self.isClaimedLocal {
             self.claimButton.setTitle("Claimed", for: .normal)
+            self.claimButton.backgroundColor = UIColor(red: 226/255, green: 162/255, blue: 106/255, alpha: 1.0)
         } else {
             self.claimButton.setTitle("Accept", for: .normal)
+            self.claimButton.backgroundColor = UIColor(red: 45/255, green: 145/255, blue: 76/255, alpha: 1.0)
         }
     }
 
     @IBAction func claimPressed(_ sender: Any) {
         self.isClaimedLocal.toggle()
         updateViews()
-        self.delegate?.claimButtonPressed(is_claimed: self.isClaimedLocal)
+        if let food = food {
+            self.delegate?.claimButtonPressed(food: food)
+        }
     }
 }

@@ -203,9 +203,9 @@
 				D667E43123581A6C005CBCB3 /* VolunteerLogin.storyboard */,
 				D667E43323581A74005CBCB3 /* RegisterSelection.storyboard */,
 				E3088C5B2358773D006F5B9D /* BusinessSignUpStoryboard.storyboard */,
-				E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */,
 				F39A4CDB2358F9B900E58609 /* BusinessDashboard.storyboard */,
 				F39C8EF82358C8870025CEE6 /* VolunteerDashboard.storyboard */,
+				E3088C5F2358DC43006F5B9D /* VolunteerSignUpStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
